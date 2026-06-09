@@ -130,14 +130,26 @@ width:auto;
 }
 
 .logo-container{
-    padding:0 15px;
+    position:absolute;
+    top:20px;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    z-index:10;
 }
 
-.ila-logo,
+.ila-logo{
+    height:90px;
+    width:auto;
+}
+
 .uoh-logo{
-    height:55px;
+    height:90px;
+    width:auto;
 }
-
 .hero-content{
     position:relative;
     top:120px;
@@ -190,9 +202,9 @@ width:auto;
 <div class="hero">
 
     <div class="logo-container">
-        <img src="ila.png" alt="ILA Logo" class="ila-logo">
-        <img src="uoh.jpg" alt="UoH Logo" class="uoh-logo">
-    </div>
+    <img src="ila.png.webp" alt="ILA Logo" class="ila-logo">
+    <img src="uoh.png" alt="UoH Logo" class="uoh-logo">
+</div>
 
     <div class="hero-content">
 
