@@ -4,334 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>72nd ILA International Conference | FLARE-2027</title>
+<title>72nd ILA International Conference</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
-line-height:1.6;
-color:#333;
+    font-family:Arial, sans-serif;
 }
 
 /* NAVBAR */
 
 .navbar{
-background:#002147;
-padding:15px 30px;
-position:sticky;
-top:0;
-z-index:999;
+    background:#F8BBD0;
+    padding:15px 30px;
 }
 
 .navbar a{
-color:#fff;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
+    color:white;
+    text-decoration:none;
+    margin-right:25px;
+    font-weight:bold;
 }
 
 .navbar a:hover{
-color:#FFD700;
+    color:#ffd700;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
-position:relative;
-height:100vh;
-background:url('banner.png') center center/cover no-repeat;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.25);
+    height:700px;
+    background:url('banner.png') center center/cover no-repeat;
+    position:relative;
 }
 
 /* LOGOS */
 
 .logo-container{
-position:absolute;
-top:20px;
-left:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 30px;
-z-index:10;
+    position:absolute;
+    top:20px;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
 }
 
 .ila-logo{
-height:90px;
-width:auto;
+    height:70px;
+    width:auto;
 }
 
 .uoh-logo{
-height:80px;
-width:auto;
+    height:70px;
+    width:auto;
 }
 
 /* HERO CONTENT */
 
 .hero-content{
-position:absolute;
-top:50%;
-right:70px;
-transform:translateY(-50%);
-width:650px;
-text-align:right;
-z-index:10;
-
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(6px);
-padding:30px;
-border-radius:15px;
+    position:absolute;
+    top:180px;
+    left:60px;
+    color:black;
 }
 
 .hero-content h1{
-font-size:56px;
-line-height:1.1;
-color:#ffffff;
-margin-bottom:15px;
-text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+    font-size:58px;
+    color:#FF1493;
+    margin-bottom:10px;
 }
 
 .hero-content h2{
-font-size:28px;
-color:#FFD700;
-line-height:1.3;
-margin-bottom:15px;
+    font-size:28px;
+    margin-bottom:10px;
 }
 
 .hero-content h3{
-font-size:22px;
-color:#ffffff;
-font-weight:normal;
-}
-
-/* SECTIONS */
-
-.section{
-padding:70px 80px;
-}
-
-.section h2{
-color:#002147;
-margin-bottom:20px;
-padding-left:15px;
-border-left:6px solid #FFD700;
-}
-
-.section p{
-margin-bottom:15px;
-text-align:justify;
-}
-
-.light{
-background:#f5f7fa;
-}
-
-ul{
-margin-left:25px;
-}
-
-ul li{
-margin-bottom:10px;
-}
-
-/* FOOTER */
-
-.footer{
-background:#002147;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.logo-container{
-padding:0 15px;
-}
-
-.ila-logo{
-height:60px;
-}
-
-.uoh-logo{
-height:55px;
-}
-
-.hero-content{
-right:15px;
-left:15px;
-width:auto;
-text-align:center;
-padding:20px;
-}
-
-.hero-content h1{
-font-size:32px;
-}
-
-.hero-content h2{
-font-size:18px;
-}
-
-.hero-content h3{
-font-size:16px;
-}
-
-.section{
-padding:40px 25px;
-}
-
-.navbar{
-padding:12px;
-}
-
-.navbar a{
-display:inline-block;
-margin:5px 10px;
-font-size:14px;
-}
-
+    font-size:22px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 
-<div class="navbar">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#themes">Themes</a>
-<a href="#committee">Committee</a>
-<a href="#contact">Contact</a>
-</div>
+<nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Themes</a>
+    <a href="#">Committee</a>
+    <a href="#">Contact</a>
+</nav>
 
 <!-- HERO SECTION -->
 
 <div class="hero">
 
-<div class="logo-container">
-<img src="ila.png.webp" alt="ILA Logo" class="ila-logo">
-<img src="uoh.jpg" alt="University of Hyderabad Logo" class="uoh-logo">
-</div>
+    <div class="logo-container">
 
-<div class="hero-content">
+        <img src="ila.png.webp" alt="ILA Logo" class="ila-logo">
 
-<h1>72nd ILA International Conference</h1>
+        <img src="uoh.jpg" alt="UoH Logo" class="uoh-logo">
 
-<h2>
-Future Libraries: Advancing Research & Excellence (FLARE-2027)
-</h2>
+    </div>
 
-<h3>
-7–9 January 2027 | University of Hyderabad
-</h3>
+    <div class="hero-content">
 
-</div>
+        <h1>72nd ILA International Conference</h1>
 
-</div>
+        <h2>
+            Future Libraries: Advancing Research & Excellence (FLARE-2027)
+        </h2>
 
-<!-- ABOUT -->
+        <h3>
+            7–9 January 2027 | University of Hyderabad
+        </h3>
 
-<section class="section" id="about">
+    </div>
 
-<h2>About Conference</h2>
-
-<p>
-The Indian Library Association (ILA) is honoured to host its 72nd Annual Conference 2027 in collaboration with the University of Hyderabad, an Institution of Eminence.
-</p>
-
-<p>
-This international conference brings together librarians, information scientists, academicians, researchers, policymakers and technology innovators from across the world to discuss emerging trends, technologies and best practices in Library and Information Science.
-</p>
-
-<p>
-The conference theme, <strong>Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong>, focuses on innovation, sustainability, artificial intelligence, research support services and transformative library practices.
-</p>
-
-</section>
-
-<!-- THEMES -->
-
-<section class="section light" id="themes">
-
-<h2>Conference Themes</h2>
-
-<ul>
-<li>Libraries as Drivers of Sustainable Development</li>
-<li>Artificial Intelligence and Libraries</li>
-<li>Research Support and Scholarly Communication</li>
-<li>Assistive Technologies and Inclusive Libraries</li>
-<li>Smart Libraries and IoT Applications</li>
-<li>Open Science and Research Data Management</li>
-<li>Digital Preservation and Knowledge Repositories</li>
-<li>Emerging Technologies in Library Services</li>
-</ul>
-
-</section>
-
-<!-- COMMITTEE -->
-
-<section class="section" id="committee">
-
-<h2>Local Organizing Committee</h2>
-
-<p>
-Shri B. Srinivas<br>
-Dr. Sanjay Kumar Sharma<br>
-Shri Srinivasa Rao<br>
-Shri Abhishek Kumar<br>
-Dr. V. Venkateswarlu<br>
-Mr. G. Rangappa Naidu<br>
-Mr. S. Sreekumar<br>
-Dr. Renuka S. Mulimani<br>
-Dr. Bhojaraju Gunjal<br>
-Dr. Murali Prasad<br>
-Dr. Srinivasulu<br>
-All IGM Library Staff
-</p>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section light" id="contact">
-
-<h2>Contact</h2>
-
-<p>
-Indira Gandhi Memorial Library<br>
-University of Hyderabad<br>
-Hyderabad - 500046<br>
-Email: 72ilaconferencehyd@gmail.com
-</p>
-
-</section>
-
-<div class="footer">
-© 2027 FLARE-2027 | University of Hyderabad | Indian Library Association
 </div>
 
 </body>
