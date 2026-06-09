@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>72nd ILA International Conference</title>
+<title>72nd ILA International Conference | FLARE-2027</title>
 
 <style>
 
@@ -16,6 +16,7 @@
 
 body{
     font-family:Arial, sans-serif;
+    line-height:1.7;
 }
 
 /* NAVBAR */
@@ -33,18 +34,16 @@ body{
 }
 
 .navbar a:hover{
-    color:#ffd700;
+    color:#FFD700;
 }
 
 /* HERO SECTION */
 
 .hero{
-    height:700px;
+    height:500px;
     background:url('banner.png') center center/cover no-repeat;
     position:relative;
 }
-
-/* LOGOS */
 
 .logo-container{
     position:absolute;
@@ -58,57 +57,118 @@ body{
 }
 
 .ila-logo{
-    height:70px;
+    height:80px;
     width:auto;
 }
 
 .uoh-logo{
-    height:70px;
+    height:80px;
     width:auto;
 }
 
-/* HERO CONTENT */
-
 .hero-content{
-position:absolute;
-top:100px;
-right:20px;
-width:850px;
-text-align:right;
-z-index:10;
+    position:absolute;
+    top:100px;
+    right:20px;
+    width:850px;
+    text-align:right;
+    background:rgba(255,255,255,0.70);
+    padding:20px;
+    border-radius:10px;
+}
 
-background:rgba(255,255,255,0.65);
-padding:20px;
-border-radius:10px;
-}
-background:rgba(255,255,255,0.65);
-padding:20px;
-border-radius:10px;
-}
 .hero-content h1{
-font-size:64px;
-color:#800000; /* Maroon */
-font-weight:700;
-white-space:nowrap;
-margin-bottom:15px;
+    font-size:60px;
+    color:#800000;
+    font-weight:700;
+    white-space:nowrap;
+    margin-bottom:15px;
 }
 
 .hero-content h2{
-font-size:24px;
-color:#800000; /* Maroon */
-line-height:1.3;
-margin-bottom:10px;
-font-weight:600;
+    font-size:26px;
+    color:#800000;
+    margin-bottom:10px;
+    line-height:1.3;
 }
 
 .hero-content h3{
-font-size:20px;
-color:#800000; /* Maroon */
-font-weight:600;
+    font-size:20px;
+    color:#800000;
+}
+
+/* ABOUT SECTION */
+
+.section{
+    padding:70px 100px;
+}
+
+.section h2{
+    color:#800000;
+    border-left:6px solid #FFD700;
+    padding-left:15px;
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+.section p{
+    text-align:justify;
+    line-height:1.9;
+    margin-bottom:20px;
+    font-size:17px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+    height:auto;
+    padding-bottom:40px;
+}
+
+.logo-container{
+    padding:0 15px;
+}
+
+.ila-logo,
+.uoh-logo{
+    height:55px;
+}
+
+.hero-content{
+    position:relative;
+    top:120px;
+    right:auto;
+    width:95%;
+    margin:auto;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:30px;
+    white-space:normal;
+}
+
+.hero-content h2{
+    font-size:18px;
+}
+
+.hero-content h3{
+    font-size:16px;
+}
+
+.section{
+    padding:40px 20px;
+}
+
+.section h2{
+    font-size:26px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
@@ -117,7 +177,7 @@ font-weight:600;
 
 <nav class="navbar">
     <a href="#">Home</a>
-    <a href="#">About</a>
+    <a href="#about">About</a>
     <a href="#">Themes</a>
     <a href="#">Committee</a>
     <a href="#">Contact</a>
@@ -128,11 +188,8 @@ font-weight:600;
 <div class="hero">
 
     <div class="logo-container">
-
         <img src="ila.png.webp" alt="ILA Logo" class="ila-logo">
-
         <img src="uoh.jpg" alt="UoH Logo" class="uoh-logo">
-
     </div>
 
     <div class="hero-content">
@@ -151,8 +208,6 @@ font-weight:600;
 
 </div>
 
-</body>
-</html>
 <!-- ABOUT THE CONFERENCE -->
 
 <section class="section" id="about">
@@ -164,11 +219,11 @@ The Indian Library Association (ILA), in collaboration with the University of Hy
 </p>
 
 <p>
-FLARE-2027 aims to provide an international platform for librarians, information professionals, academicians, researchers, students, policymakers, and technology experts to exchange ideas, share experiences, and discuss the latest developments in Library and Information Science. The conference will focus on emerging technologies, innovative library services, digital transformation, and the future role of libraries in advancing research and academic excellence.
+FLARE-2027 aims to provide an international platform for librarians, information professionals, academicians, researchers, students, policymakers, and technology experts to exchange ideas, share experiences, and discuss the latest developments in Library and Information Science.
 </p>
 
 <p>
-The conference theme, <strong>“Future Libraries: Advancing Research & Excellence (FLARE-2027)”</strong>, highlights the importance of libraries as dynamic centers of knowledge, innovation, and lifelong learning. The conference will address contemporary issues such as Artificial Intelligence in Libraries, Open Science, Research Data Management, Digital Preservation, Smart Libraries, Assistive Technologies, and Sustainable Library Development.
+The conference theme highlights the importance of libraries as dynamic centers of knowledge, innovation, and lifelong learning. The conference will address contemporary issues such as Artificial Intelligence in Libraries, Open Science, Research Data Management, Digital Preservation, Smart Libraries, Assistive Technologies, and Sustainable Library Development.
 </p>
 
 <p>
@@ -180,20 +235,6 @@ The conference seeks to envision the future of libraries and empower information
 </p>
 
 </section>
-.section{
-padding:70px 100px;
-}
 
-.section h2{
-color:#800000;
-border-left:6px solid #FFD700;
-padding-left:15px;
-margin-bottom:30px;
-}
-
-.section p{
-text-align:justify;
-line-height:1.8;
-margin-bottom:18px;
-font-size:17px;
-}
+</body>
+</html>
