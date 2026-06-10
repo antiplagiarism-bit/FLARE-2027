@@ -151,7 +151,10 @@ margin-bottom:10px;
 }
 
 .uoh-logo{
-    height:90px;
+    position:absolute;
+    right:20px;
+    top:0;
+    height:80px;
     width:auto;
 }
 .hero-content{
@@ -234,7 +237,33 @@ margin-bottom:10px;
     </div>
 
 </div>
+<section class="quick-links">
 
+<div class="card">
+<h3>Call for Papers</h3>
+<p>Submit your research papers.</p>
+<a href="papers.html">Read More</a>
+</div>
+
+<div class="card">
+<h3>Registration</h3>
+<p>Conference registration details.</p>
+<a href="registration.html">Register</a>
+</div>
+
+<div class="card">
+<h3>Sponsorship</h3>
+<p>Sponsorship opportunities.</p>
+<a href="sponsorship.html">View</a>
+</div>
+
+<div class="card">
+<h3>Committees</h3>
+<p>Conference Committees.</p>
+<a href="committee.html">View</a>
+</div>
+
+</section>
 <!-- ABOUT THE CONFERENCE -->
 
 <section class="section" id="about">
@@ -286,3 +315,33 @@ Combining world-class education, interdisciplinary learning, research excellence
 </p>
 
 </section>
+.quick-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
+background:#f8f8f8;
+}
+
+.card{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 15px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card h3{
+color:#800000;
+margin-bottom:10px;
+}
+
+.card a{
+display:inline-block;
+padding:10px 20px;
+background:#800000;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+margin-top:10px;
+}
