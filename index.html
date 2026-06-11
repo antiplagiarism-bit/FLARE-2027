@@ -284,11 +284,61 @@ body{
 
 </div>
 
-<!-- ABOUT THE CONFERENCE -->
+```html
+<style>
+.about-wrapper{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.about-content{
+    flex:2;
+}
+
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    max-width:100%;
+    width:350px;
+    height:auto;
+}
+
+.read-more{
+    display:inline-block;
+    background:#800000;
+    color:#fff;
+    padding:10px 20px;
+    text-decoration:none;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+.read-more:hover{
+    background:#002147;
+}
+
+@media(max-width:768px){
+    .about-wrapper{
+        flex-direction:column;
+    }
+
+    .about-image img{
+        width:250px;
+    }
+}
+</style>
 
 <section class="section" id="about">
 
 <h2>About the Conference</h2>
+
+<div class="about-wrapper">
+
+<div class="about-content">
 
 <p>
 The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the <strong>72nd ILA International Conference on Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong> from <strong>7–9 January 2027</strong> at the University of Hyderabad, Hyderabad, India.
@@ -310,39 +360,15 @@ Through keynote lectures, invited talks, technical sessions, panel discussions, 
 The conference seeks to envision the future of libraries and empower information professionals to support research, innovation, and societal development in an increasingly digital and interconnected world.
 </p>
 
-</section>
-<section class="section" id="dates">
+<a href="about.html" class="read-more">Read More</a>
 
-<h2>Important Dates</h2>
+</div>
 
-<table class="dates-table">
+<div class="about-image">
+    <img src="72ila.png" alt="72nd ILA Conference">
+</div>
 
-<tr>
-<th>Activity</th>
-<th>Date</th>
-</tr>
-
-<tr>
-<td>Last Date for Full Paper Submission</td>
-<td>15 August 2026</td>
-</tr>
-
-<tr>
-<td>Notification of Acceptance of Paper</td>
-<td>15 September 2026</td>
-</tr>
-
-<tr>
-<td>Last Date for Conference Registration</td>
-<td>15 December 2026</td>
-</tr>
-
-<tr>
-<td>Conference Dates</td>
-<td>07–09 January 2027</td>
-</tr>
-
-</table>
+</div>
 
 </section>
 <footer class="footer">
