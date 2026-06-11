@@ -355,24 +355,127 @@ body{
 
 <section class="about-section">
 
-    <div class="about-content">
-        <h2>About the Conference</h2>
+    <section class="about-section">
 
-        <p>
-        The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the 72nd ILA International Conference on Future Libraries: Advancing Research & Excellence (FLARE-2027) from 7–9 January 2027 at the University of Hyderabad, Hyderabad, India.
-        </p>
+<style>
+.about-section{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:40px;
+    background:#fff;
+}
 
-        <p>
-        FLARE-2027 aims to provide an international platform for librarians, information professionals, academicians, researchers, students, policymakers, and technology experts to exchange ideas and discuss the latest developments in Library and Information Science.
-        </p>
+.about-content{
+    flex:2;
+}
 
-        <a href="about.html" class="read-more">Read More</a>
+.about-content h2{
+    color:#002147;
+    font-size:32px;
+    margin-bottom:15px;
+    border-left:6px solid #FFD700;
+    padding-left:15px;
+}
 
-    </div>
+.about-content p{
+    text-align:justify;
+    line-height:1.8;
+    margin-bottom:15px;
+}
 
-    <div class="about-image">
-        <img src="72ila.png" alt="FLARE-2027 Logo">
-    </div>
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:800px;
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.read-more{
+    display:inline-block;
+    background:#800000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.read-more:hover{
+    background:#002147;
+}
+
+@media(max-width:768px){
+    .about-section{
+        flex-direction:column;
+    }
+
+    .about-image img{
+        max-width:300px;
+    }
+}
+
+.about-image img{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.read-more{
+    display:inline-block;
+    background:#800000;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.read-more:hover{
+    background:#002147;
+}
+
+@media(max-width:768px){
+    .about-section{
+        flex-direction:column;
+    }
+
+    .about-image img{
+        max-width:300px;
+    }
+}
+</style>
+
+<div class="about-content">
+
+<h2>About the Conference</h2>
+
+<p>
+The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the 72nd ILA International Conference on Future Libraries: Advancing Research & Excellence (FLARE-2027) from 7–9 January 2027 at the University of Hyderabad, Hyderabad, India.
+</p>
+
+<p>
+FLARE-2027 aims to provide an international platform for librarians, information professionals, academicians, researchers, students, policymakers, and technology experts to exchange ideas and discuss the latest developments in Library and Information Science.
+</p>
+
+<a href="about.html" class="read-more">Read More</a>
+
+</div>
+
+<div class="about-image">
+    <img src="72ila.png" alt="FLARE-2027">
+</div>
+
+</section>
 
 </section>
 <footer class="footer">
