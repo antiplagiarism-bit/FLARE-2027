@@ -1,54 +1,101 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Committee | FLARE-2027</title>
+
 <style>
-.committee-container{
-    width:95%;
-    max-width:1200px;
-    margin:20px auto;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-}
-
-.committee-section{
-    margin-bottom:40px;
-}
-
-.committee-section h2{
-    color:#003366;
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:15px;
-    padding-bottom:8px;
-    border-bottom:1px solid #cccccc;
-}
-
-.committee-section ul{
+*{
     margin:0;
-    padding-left:25px;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.committee-section li{
-    margin-bottom:8px;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#333;
     line-height:1.8;
 }
 
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    margin-bottom:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.section{
+    background:#fff;
+    margin-bottom:30px;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    color:#003366;
+    margin-bottom:15px;
+    border-bottom:2px solid #003366;
+    padding-bottom:10px;
+}
+
+.section ul{
+    padding-left:25px;
+}
+
+.section li{
+    margin-bottom:8px;
+}
+
 .back-home{
-    margin-top:25px;
+    text-align:center;
+    margin:30px 0;
 }
 
 .back-home a{
-    color:#003366;
+    background:#003366;
+    color:white;
+    padding:12px 25px;
     text-decoration:none;
-    font-weight:bold;
+    border-radius:5px;
 }
 
 .back-home a:hover{
-    text-decoration:underline;
+    background:#00509e;
+}
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
 }
 </style>
+</head>
 
-<div class="committee-container">
+<body>
 
-    <div class="committee-section">
+<header>
+    <h1>FLARE-2027 Conference Committees</h1>
+    <p>University of Hyderabad in collaboration with Indian Library Association (ILA)</p>
+</header>
+
+<div class="container">
+
+    <section class="section">
         <h2>Patrons</h2>
         <ul>
             <li>Prof. J. Anuradha, Vice-Chancellor (In-charge), University of Hyderabad</li>
@@ -56,9 +103,9 @@ html
             <li>Mr. Budida Srinivas, Finance Officer, University of Hyderabad</li>
             <li>Ashish Jacob Thomas, Public Relations Officer (PRO), University of Hyderabad</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="committee-section">
+    <section class="section">
         <h2>International Advisory Committee</h2>
         <ul>
             <li>Daniel Goh, University Librarian, National University of Singapore</li>
@@ -72,16 +119,39 @@ html
             <li>Prof. Muhammad Mezbah-ul-Islam, Dhaka University, Bangladesh</li>
             <li>Prof. Mervin Weerasinghe, University of Kelaniya, Sri Lanka</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="committee-section">
+    <section class="section">
+        <h2>National Advisory Committee</h2>
+        <ul>
+            <li>Prof. Anand K. Kondapi, Dean, School of Life Sciences, UoH</li>
+            <li>Prof. Atul Negi, Dean, School of Computer & Information Sciences, UoH</li>
+            <li>Prof. Debashis Acharya, School of Economics, UoH</li>
+            <li>Prof. G. V. R. K. Acharyulu, Dean, School of Management Studies, UoH</li>
+            <li>Prof. M. T. Ansari, Dean, School of Humanities, UoH</li>
+            <li>Prof. P. Thirumal, School of Arts & Communication, UoH</li>
+            <li>Prof. Ramesh Kumar Mishra, Dean, School of Medical Sciences, UoH</li>
+            <li>Prof. P. K. Suresh, Dean, School of Physics, UoH</li>
+            <li>Prof. Samar Kumar Das, Dean, School of Chemistry, UoH</li>
+            <li>Prof. Saroj Panigrahi, School of Mathematics, UoH</li>
+        </ul>
+    </section>
+
+    <section class="section">
         <h2>Organizing Committee</h2>
         <p>Details will be updated soon.</p>
-    </div>
+    </section>
 
     <div class="back-home">
         <a href="index.html">Back to Home</a>
     </div>
 
 </div>
+
+<footer>
+    © FLARE-2027 | University of Hyderabad & Indian Library Association
+</footer>
+
+</body>
+</html>
 ```
