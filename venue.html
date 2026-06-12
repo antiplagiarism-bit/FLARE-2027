@@ -1,90 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Venue | FLARE-2027</title>
 
 <style>
 body{
     font-family: Arial, sans-serif;
     margin:0;
-    padding:0;
-    background:#eef2f7;
+    background:#f8f8f8;
+    line-height:1.8;
 }
 
 /* HEADER */
 .header{
-    background: linear-gradient(to right, #0b3d91, #1e88e5);
+    background:#002147;
     color:white;
-    padding:45px 20px;
+    padding:20px;
     text-align:center;
 }
 
 .header h1{
     margin:0;
-    font-size:32px;
+    font-size:26px;
 }
 
-.header p{
-    margin-top:8px;
-    font-size:18px;
+/* NAVIGATION */
+.nav{
+    background:#800000;
+    padding:10px 20px;
 }
 
-/* CONTAINER */
+.nav a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.nav a:hover{
+    color:#FFD700;
+}
+
+/* CONTENT */
 .container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:30px 0;
-}
-
-/* CARD */
-.card{
+    width:85%;
+    margin:20px auto;
     background:white;
     padding:25px;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    margin-bottom:22px;
+    border:1px solid #ddd;
 }
 
 h2{
-    color:#0b3d91;
-    margin-bottom:10px;
+    color:#002147;
+    border-bottom:2px solid #800000;
+    padding-bottom:5px;
+    margin-top:25px;
 }
 
-p, li{
-    font-size:16px;
-    line-height:1.6;
-}
-
-ul{
-    padding-left:20px;
-}
-
-img{
-    width:100%;
-    border-radius:12px;
-    margin-top:15px;
-}
-
-/* MAP */
-.map{
-    width:100%;
-    height:380px;
-    border:0;
-    border-radius:12px;
+p{
+    text-align:justify;
+    font-size:15px;
 }
 
 /* FOOTER */
 .footer{
-    text-align:center;
-    padding:18px;
-    background:#0b3d91;
+    background:#002147;
     color:white;
-    font-size:14px;
+    text-align:center;
+    padding:15px;
     margin-top:20px;
+    font-size:14px;
+}
+
+.back-home{
+    margin-top:25px;
 }
 </style>
 </head>
@@ -92,63 +85,67 @@ img{
 <body>
 
 <div class="header">
-    <h1>FLARE-2027 Conference Venue</h1>
-    <p>Indira Gandhi Memorial Library (IGML), University of Hyderabad</p>
+    <h1>FLARE-2027 International Conference</h1>
+    <p>Conference Venue</p>
+</div>
+
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="papers.html">Call for Papers</a>
+    <a href="registration.html">Registration</a>
+    <a href="committee.html">Committee</a>
+    <a href="venue.html">Venue</a>
 </div>
 
 <div class="container">
 
-    <!-- VENUE INFO -->
-    <div class="card">
-        <h2>📍 Venue Location</h2>
-        <p>
-            The FLARE-2027 International Conference will be held at the prestigious 
-            <b>Indira Gandhi Memorial Library (IGML)</b>, University of Hyderabad, Gachibowli, Hyderabad, India.
-        </p>
+    <h1>Conference Venue</h1>
 
-        <img src="igm-library.jpg" alt="IGM Library UOH">
-    </div>
+    <h2>Venue Details</h2>
 
-    <!-- ABOUT IGML -->
-    <div class="card">
-        <h2>🏛️ About IGML</h2>
-        <p>
-            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad,
-            supporting advanced research and academic excellence across disciplines.
-        </p>
+    <p>
+        The 72nd ILA International Conference (FLARE-2027) will be held at
+        <strong>Indira Gandhi Memorial Library, University of Hyderabad,
+        Hyderabad, Telangana, India.</strong>
+    </p>
 
-        <ul>
-            <li>Fully automated digital library system</li>
-            <li>Large reading halls and research zones</li>
-            <li>Access to international journals & e-resources</li>
-            <li>High-speed Wi-Fi and digital infrastructure</li>
-        </ul>
-    </div>
+    <p>
+        The University of Hyderabad is one of India's premier institutions,
+        known for its beautiful green campus, world-class academic environment,
+        and excellent conference facilities.
+    </p>
 
-    <!-- ABOUT UOH -->
-    <div class="card">
-        <h2>🎓 About University of Hyderabad</h2>
-        <p>
-            A premier central university in India known for its green campus, academic excellence,
-            and world-class research environment.
-        </p>
+    <h2>Location Highlights</h2>
 
-        <img src="uoh-campus.jpg" alt="University of Hyderabad Campus">
-    </div>
+    <ul>
+        <li>Modern conference halls with audio-visual facilities</li>
+        <li>Well-connected by road, rail, and air</li>
+        <li>Close to major hotels and accommodation</li>
+        <li>Accessible from Rajiv Gandhi International Airport</li>
+        <li>Metro and public transport connectivity available nearby</li>
+    </ul>
 
-    <!-- MAP -->
-    <div class="card">
-        <h2>📌 Google Map Location</h2>
-        <iframe class="map"
-            src="https://www.google.com/maps?q=Indira%20Gandhi%20Memorial%20Library%20University%20of%20Hyderabad&output=embed">
-        </iframe>
+    <h2>Address</h2>
+
+    <p>
+        Indira Gandhi Memorial Library<br>
+        University of Hyderabad<br>
+        Prof. C. R. Rao Road<br>
+        Gachibowli, Hyderabad – 500046<br>
+        Telangana, India
+    </p>
+
+    <div class="back-home">
+        <a href="index.html">Back to Home</a>
     </div>
 
 </div>
 
 <div class="footer">
-    © FLARE-2027 | University of Hyderabad | All Rights Reserved
+    © FLARE-2027 | University of Hyderabad
 </div>
 
 </body>
 </html>
+```
