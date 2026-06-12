@@ -1,22 +1,12 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>72nd ILA International Conference | FLARE-2027</title>
+<title>FLARE-2027 | 72nd ILA International Conference</title>
 
 <style>
-.announcement{
-    background:#ffffff;
-    color:#002147;
-    padding:12px;
-    font-weight:bold;
-    border-top:3px solid #002147;
-    border-bottom:3px solid #002147;
-    font-size:16px;
-}
 *{
     margin:0;
     padding:0;
@@ -24,23 +14,23 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
     line-height:1.7;
 }
 
-/* NAVBAR */
+/* Navigation */
 
 .navbar{
     background:#800000;
-    padding:15px 30px;
-    border-top:5px solid #002147;
-    border-bottom:3px solid #002147;
+    padding:15px;
+    text-align:center;
 }
 
 .navbar a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    margin-right:25px;
+    margin:0 15px;
     font-weight:bold;
 }
 
@@ -48,246 +38,184 @@ body{
     color:#FFD700;
 }
 
-/* HERO SECTION */
+/* Announcement */
+
+.announcement{
+    background:#ffffff;
+    border-top:3px solid #002147;
+    border-bottom:3px solid #002147;
+    color:#002147;
+    padding:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* Hero */
 
 .hero{
-    height:500px;
-    background:url('banner.png') center center/cover no-repeat;
     position:relative;
+    background:url("banner.png") center center/cover no-repeat;
+    min-height:500px;
 }
 
-.logo-container{
+.logo-left{
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:10;
-}
-.ila-logo{
-    position:absolute;
-    top:10px;
-    left:15px;
-    height:75px;
-    width:auto;
+    left:20px;
+    top:20px;
+    width:90px;
 }
 
-.uoh-logo{
+.logo-right{
     position:absolute;
-    top:10px;
-    right:15px;
-    height:75px;
-    width:auto;
-}
-
-.hero-content{
-    position:absolute;
-    top:100px;
     right:20px;
-    width:850px;
-    text-align:right;
-    background:rgba(255,255,255,0.70);
-    padding:20px;
+    top:20px;
+    width:90px;
+}
+
+.hero-box{
+    position:absolute;
+    right:40px;
+    top:120px;
+    background:rgba(255,255,255,0.80);
+    padding:25px;
     border-radius:10px;
+    max-width:700px;
+    text-align:right;
 }
 
-.hero-content h1{
-    animation:slideLeft 1s ease-out;
+.hero-box h1{
+    color:#003399;
+    font-size:40px;
 }
 
-.hero-content h2{
-    animation:slideLeft 1.5s ease-out;
+.hero-box h2{
+    color:#003399;
+    margin-top:10px;
 }
 
-.hero-content h3{
-    animation:slideLeft 2s ease-out;
+.hero-box p{
+    color:#003399;
+    margin-top:10px;
+    font-size:18px;
 }
 
-@keyframes slideLeft{
-    0%{
-        opacity:0;
-        transform:translateX(80px);
-    }
-    100%{
-        opacity:1;
-        transform:translateX(0);
-    }
+/* About */
 
-/* ABOUT SECTION */
-
-.section{
-    padding:20px 40px;
+.about-section{
+    background:#fff;
+    display:flex;
+    gap:40px;
+    align-items:center;
+    padding:50px;
 }
 
-.section p{
-    text-align:justify;
-    line-height:1.7;
-    margin-bottom:10px;
-    font-size:16px;
+.about-text{
+    flex:2;
 }
 
-.section h2{
-    color:#002147;
-    font-size:30px;
-    font-weight:700;
-    margin-bottom:10px;   /* space thaggutundi */
-    padding-bottom:8px;
+.about-text h2{
+    color:#800000;
+    font-size:34px;
+    margin-bottom:20px;
     border-bottom:3px solid #800000;
     display:inline-block;
 }
 
-.section p{
-    margin-top:5px;
-    margin-bottom:12px;
+.about-text p{
     text-align:justify;
-    line-height:1.8;
-    font-size:16px;
+    margin-bottom:15px;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-    height:auto;
-    padding-bottom:40px;
+.about-image{
+    flex:1;
 }
 
-.logo-container{
-    position:absolute;
-    top:20px;
-    left:0;
+.about-image img{
     width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 30px;
-    z-index:10;
+    border-radius:10px;
 }
 
-.ila-logo{
-    height:90px;
-    width:auto;
+.readmore{
+    display:inline-block;
+    background:#800000;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:5px;
+    margin-top:10px;
 }
 
-.uoh-logo{
-    position:absolute;
-    right:20px;
-    top:0;
-    height:80px;
-    width:auto;
-}
-.hero-content{
-    position:relative;
-    top:120px;
-    right:auto;
-    width:95%;
-    margin:auto;
-    text-align:center;
-}
-
-.hero-content h1{
-    font-size:30px;
-    white-space:normal;
-}
-
-.hero-content h2{
-    font-size:18px;
-}
-
-.hero-content h3{
-    font-size:16px;
-}
-
-.section{
-    padding:40px 20px;
-}
-
-.section h2{
-    font-size:26px;
-}
-
-}
-.section h2{
-    font-size:26px;
-}
-
-.dates-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-.dates-table th{
+.readmore:hover{
     background:#002147;
-    color:white;
-    padding:15px;
 }
 
-.dates-table td{
-    border:1px solid #ddd;
-    padding:15px;
-}
-
-.dates-table tr:nth-child(even){
-    background:#f5f5f5;
-}
+/* Footer */
 
 .footer{
-    width:100%;
-    background:#002147 !important;
-    color:#ffffff !important;
-    text-align:center !important;
+    background:#002147;
+    color:#fff;
+    text-align:center;
     padding:40px 20px;
-    margin-top:40px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
 }
 
-.footer h3{
+.footer h2{
     color:#FFD700;
-    font-size:30px;
     margin-bottom:15px;
-    text-align:center;
 }
 
 .footer p{
-    color:#ffffff;
-    text-align:center;
     margin:8px 0;
-    line-height:1.8;
 }
 
+/* Responsive */
+
+@media(max-width:768px){
+
+.about-section{
+    flex-direction:column;
+    padding:20px;
+}
+
+.hero{
+    min-height:650px;
+}
+
+.hero-box{
+    position:relative;
+    top:160px;
+    right:0;
+    margin:auto;
+    width:90%;
+    text-align:center;
+}
+
+.logo-left{
+    width:70px;
+}
+
+.logo-right{
+    width:70px;
+}
+
+.hero-box h1{
+    font-size:28px;
+}
+}
 </style>
 </head>
 
 <body>
-</style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
 
 <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="papers.html">Call for Papers</a>
-    <a href="registration.html">Registration</a>
-    <a href="sponsorship.html">Sponsorship</a>
-    <a href="committee.html">Committee</a>
-    <a href="venue.html">Venue</a>
-    <a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="papers.html">Call for Papers</a>
+<a href="registration.html">Registration</a>
+<a href="sponsorship.html">Sponsorship</a>
+<a href="committee.html">Committee</a>
+<a href="venue.html">Venue</a>
 </nav>
-<!-- HERO SECTION -->
 
-<div class="hero">
-
-  <div class="logo-container">
-    <img src="ila.png" alt="ILA Logo" class="ila-logo">
-    <img src="uoh.jpg" alt="UoH Logo" class="uoh-logo">
-</div>
 <div class="announcement">
 <marquee>
 📢 Full Paper Submission: 15 August 2026 |
@@ -296,216 +224,55 @@ body{
 📢 Conference Dates: 07–09 January 2027
 </marquee>
 </div>
-    <div class="hero-content">
 
-        <h1 style="color:#003399;">72nd ILA International Conference</h1>
+<section class="hero">
 
-<h2 style="color:#003399;">
-Future Libraries: Advancing Research & Excellence (FLARE-2027)
-</h2>
+<img src="ila.png" class="logo-left" alt="ILA Logo">
+<img src="uoh.jpg" class="logo-right" alt="UoH Logo">
 
-<p style="color:#003399;">
-7–9 January 2027 | University of Hyderabad
-</p>
-    </div>
+<div class="hero-box">
+
+<h1>72nd ILA International Conference</h1>
+
+<h2>Future Libraries: Advancing Research & Excellence (FLARE-2027)</h2>
+
+<p><strong>7–9 January 2027</strong></p>
+
+<p>University of Hyderabad</p>
 
 </div>
-<style>
-.about-wrapper{
-    display:flex;
-    gap:30px;
-    align-items:center;
-}
 
-.about-wrapper{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.about-text{
-    flex:2;
-}
-
-.about-image{
-    flex:1.5;
-}
-
-.about-image img{
-    width:100%;
-    max-width:800px;
-    height:auto;
-}
-
-@media(max-width:768px){
-    .about-wrapper{
-        flex-direction:column;
-    }
-
-    .about-image img{
-        max-width:300px;
-    }
-}
-
-.read-more:hover{
-    background:#002147;
-}
-
-@media(max-width:768px){
-    .about-wrapper{
-        flex-direction:column;
-    }
-
-    .about-image img{
-        width:250px;
-    }
-}
-</style>
+</section>
 
 <section class="about-section">
 
-    <section class="about-section">
+<div class="about-text">
 
-<style>
-.about-section{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    padding:40px;
-    background:#fff;
-}
-
-.about-content{
-    flex:2;
-}
-
-.about-content h2{
-    color:#002147;
-    font-size:32px;
-    margin-bottom:15px;
-    border-left:6px solid #FFD700;
-    padding-left:15px;
-}
-
-.about-content p{
-    text-align:justify;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.about-image{
-    flex:1;
-    text-align:center;
-}
-
-.about-image img{
-    width:100%;
-    max-width:800px;
-    height:auto;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-.read-more{
-    display:inline-block;
-    background:#800000;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 20px;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.read-more:hover{
-    background:#002147;
-}
-
-@media(max-width:768px){
-    .about-section{
-        flex-direction:column;
-    }
-
-    .about-image img{
-        max-width:300px;
-    }
-}
-
-.about-image img{
-    width:100%;
-    max-width:500px;
-    height:auto;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-.read-more{
-    display:inline-block;
-    background:#800000;
-    color:#fff;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.read-more:hover{
-    background:#002147;
-}
-
-@media(max-width:768px){
-    .about-section{
-        flex-direction:column;
-    }
-
-    .about-image img{
-        max-width:300px;
-    }
-}
-</style>
-
-<div class="about-content">
-<h2 style="color:#800000;">About the Conference</h2>
+<h2>About the Conference</h2>
 
 <p>
-The Indian Library Association (ILA) is honoured to host its <strong>72nd Annual Conference 2027</strong> in the historic “City of Pearls,” Hyderabad, in collaboration with the <strong>University of Hyderabad</strong>, an Institution of Eminence. This premier international summit serves as a global nexus for librarians, information scientists, academicians, researchers, and technology innovators. As the digital and physical frontiers of information continue to merge, the conference provides a vital forum to examine the shifting paradigms of Library and Information Science. This landmark event aims to redefine the role of libraries as catalysts for global knowledge creation, research advancement, innovation, and social progress.
+The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the 72nd ILA International Conference on <strong>Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong>. The conference aims to bring together librarians, information professionals, researchers, academicians, students, policymakers, and technology experts to discuss emerging trends and innovations in library and information science.
 </p>
 
 <p>
-The main theme of the conference is <strong>Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong>. The conference focuses on a wide range of emerging and trending topics in the field of Library and Information Science, including Libraries as Drivers of Sustainable Development, Green Libraries, Artificial Intelligence and Libraries, Assistive Technologies and Inclusive Library Services, Research Data Management, Open Science, Digital Preservation, Smart Libraries, and other emerging technologies shaping the future of information services.
+The event will feature keynote lectures, invited talks, paper presentations, workshops, and networking opportunities focusing on Artificial Intelligence, Smart Libraries, Open Science, Research Data Management, Digital Preservation, Sustainable Development, and future-ready library services.
 </p>
 
-<p>
-The sub-themes of the conference encompass many of the latest innovations and transformative technologies in the library profession. Through keynote lectures, invited talks, technical sessions, workshops, panel discussions, and poster presentations, FLARE-2027 will provide opportunities for knowledge sharing, professional networking, and international collaboration. The conference will explore the essential contribution of libraries in supporting research excellence, fostering intellectual exchange, and driving meaningful community empowerment in the digital age.
-</p>
-
-<a href="about.html" class="read-more">Read More</a>
+<a href="about.html" class="readmore">Read More</a>
 
 </div>
 
 <div class="about-image">
-    <img src="72ila.png" alt="FLARE-2027">
+
+<img src="72ila.png" alt="FLARE-2027">
+
 </div>
 
 </section>
 
-<section class="about-section">
-
-    <div class="about-content">
-        <!-- About Conference Matter -->
-    </div>
-
-    <div class="about-image">
-        <img src="72ila.png" alt="FLARE-2027">
-    </div>
-
-</section>
-
-<!-- Footer START -->
-
 <footer class="footer">
 
-<h3>FLARE-2027</h3>
+<h2>FLARE-2027</h2>
 
 <p><strong>72nd ILA International Conference</strong></p>
 
@@ -522,5 +289,7 @@ Hyderabad – 500046
 <p>© 2027 Indian Library Association (ILA)</p>
 
 </footer>
-</footer>
 
+</body>
+</html>
+```
