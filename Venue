@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Venue | FLARE-2027</title>
 
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f6f9;
+}
+
+.header{
+    background: linear-gradient(to right, #0b3d91, #1e88e5);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+h2{
+    color:#0b3d91;
+}
+
+img{
+    width:100%;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.map{
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>FLARE-2027 Conference Venue</h1>
+    <p>Indira Gandhi Memorial Library (IGML), University of Hyderabad</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📍 Venue Location</h2>
+        <p>
+            The FLARE-2027 International Conference will be held at the prestigious 
+            <b>Indira Gandhi Memorial Library (IGML)</b>, University of Hyderabad, Gachibowli, Hyderabad.
+        </p>
+
+        <img src="igm-library.jpg" alt="IGM Library UOH">
+    </div>
+
+    <div class="card">
+        <h2>🏛️ About IGML</h2>
+        <p>
+            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad and a major academic hub.
+            It supports advanced research in Arts, Science, Social Sciences, Management, and Technology.
+        </p>
+
+        <ul>
+            <li>Fully automated digital library system</li>
+            <li>Large reading halls and seminar spaces</li>
+            <li>Access to international journals & e-resources</li>
+            <li>High-speed Wi-Fi and research zones</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎓 About University of Hyderabad</h2>
+        <p>
+            A premier central university known for its green campus, research excellence, and world-class academic infrastructure.
+        </p>
+
+        <img src="uoh-campus.jpg" alt="University of Hyderabad Campus">
+    </div>
+
+    <div class="card">
+        <h2>📌 Google Map Location</h2>
+        <iframe class="map"
+            src="https://www.google.com/maps?q=University%20of%20Hyderabad%20IGM%20Library&output=embed">
+        </iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
