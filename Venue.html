@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Venue | FLARE-2027</title>
 
 <style>
@@ -28,7 +30,6 @@ body{
 .header p{
     margin-top:8px;
     font-size:18px;
-    opacity:0.95;
 }
 
 /* CONTAINER */
@@ -39,19 +40,13 @@ body{
     padding:30px 0;
 }
 
-/* CARD DESIGN */
+/* CARD */
 .card{
     background:white;
     padding:25px;
     border-radius:14px;
     box-shadow:0 6px 18px rgba(0,0,0,0.08);
     margin-bottom:22px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 h2{
@@ -74,6 +69,7 @@ img{
     margin-top:15px;
 }
 
+/* MAP */
 .map{
     width:100%;
     height:380px;
@@ -84,11 +80,11 @@ img{
 /* FOOTER */
 .footer{
     text-align:center;
-    padding:20px;
+    padding:18px;
     background:#0b3d91;
     color:white;
-    margin-top:20px;
     font-size:14px;
+    margin-top:20px;
 }
 </style>
 </head>
@@ -102,39 +98,45 @@ img{
 
 <div class="container">
 
+    <!-- VENUE INFO -->
     <div class="card">
         <h2>📍 Venue Location</h2>
         <p>
-            The <b>FLARE-2027 International Conference</b> will be held at the prestigious 
-            <b>Indira Gandhi Memorial Library (IGML)</b>, University of Hyderabad, Gachibowli, Hyderabad.
+            The FLARE-2027 International Conference will be held at the prestigious 
+            <b>Indira Gandhi Memorial Library (IGML)</b>, University of Hyderabad, Gachibowli, Hyderabad, India.
         </p>
 
         <img src="igm-library.jpg" alt="IGM Library UOH">
     </div>
 
+    <!-- ABOUT IGML -->
     <div class="card">
         <h2>🏛️ About IGML</h2>
         <p>
-            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad and a major academic hub supporting advanced research.
+            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad,
+            supporting advanced research and academic excellence across disciplines.
         </p>
 
         <ul>
             <li>Fully automated digital library system</li>
-            <li>Large reading halls and seminar spaces</li>
+            <li>Large reading halls and research zones</li>
             <li>Access to international journals & e-resources</li>
-            <li>High-speed Wi-Fi and digital research zones</li>
+            <li>High-speed Wi-Fi and digital infrastructure</li>
         </ul>
     </div>
 
+    <!-- ABOUT UOH -->
     <div class="card">
         <h2>🎓 About University of Hyderabad</h2>
         <p>
-            A premier central university known for its green campus, research excellence, and world-class infrastructure.
+            A premier central university in India known for its green campus, academic excellence,
+            and world-class research environment.
         </p>
 
         <img src="uoh-campus.jpg" alt="University of Hyderabad Campus">
     </div>
 
+    <!-- MAP -->
     <div class="card">
         <h2>📌 Google Map Location</h2>
         <iframe class="map"
