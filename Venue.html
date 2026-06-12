@@ -9,16 +9,29 @@ body{
     font-family: Arial, sans-serif;
     margin:0;
     padding:0;
-    background:#f4f6f9;
+    background:#eef2f7;
 }
 
+/* HEADER */
 .header{
     background: linear-gradient(to right, #0b3d91, #1e88e5);
     color:white;
-    padding:40px 20px;
+    padding:45px 20px;
     text-align:center;
 }
 
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.header p{
+    margin-top:8px;
+    font-size:18px;
+    opacity:0.95;
+}
+
+/* CONTAINER */
 .container{
     width:90%;
     max-width:1100px;
@@ -26,16 +39,33 @@ body{
     padding:30px 0;
 }
 
+/* CARD DESIGN */
 .card{
     background:white;
     padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom:20px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom:22px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 h2{
     color:#0b3d91;
+    margin-bottom:10px;
+}
+
+p, li{
+    font-size:16px;
+    line-height:1.6;
+}
+
+ul{
+    padding-left:20px;
 }
 
 img{
@@ -46,9 +76,19 @@ img{
 
 .map{
     width:100%;
-    height:350px;
+    height:380px;
     border:0;
     border-radius:12px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#0b3d91;
+    color:white;
+    margin-top:20px;
+    font-size:14px;
 }
 </style>
 </head>
@@ -65,7 +105,7 @@ img{
     <div class="card">
         <h2>📍 Venue Location</h2>
         <p>
-            The FLARE-2027 International Conference will be held at the prestigious 
+            The <b>FLARE-2027 International Conference</b> will be held at the prestigious 
             <b>Indira Gandhi Memorial Library (IGML)</b>, University of Hyderabad, Gachibowli, Hyderabad.
         </p>
 
@@ -75,22 +115,21 @@ img{
     <div class="card">
         <h2>🏛️ About IGML</h2>
         <p>
-            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad and a major academic hub.
-            It supports advanced research in Arts, Science, Social Sciences, Management, and Technology.
+            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad and a major academic hub supporting advanced research.
         </p>
 
         <ul>
             <li>Fully automated digital library system</li>
             <li>Large reading halls and seminar spaces</li>
             <li>Access to international journals & e-resources</li>
-            <li>High-speed Wi-Fi and research zones</li>
+            <li>High-speed Wi-Fi and digital research zones</li>
         </ul>
     </div>
 
     <div class="card">
         <h2>🎓 About University of Hyderabad</h2>
         <p>
-            A premier central university known for its green campus, research excellence, and world-class academic infrastructure.
+            A premier central university known for its green campus, research excellence, and world-class infrastructure.
         </p>
 
         <img src="uoh-campus.jpg" alt="University of Hyderabad Campus">
@@ -99,10 +138,14 @@ img{
     <div class="card">
         <h2>📌 Google Map Location</h2>
         <iframe class="map"
-            src="https://www.google.com/maps?q=University%20of%20Hyderabad%20IGM%20Library&output=embed">
+            src="https://www.google.com/maps?q=Indira%20Gandhi%20Memorial%20Library%20University%20of%20Hyderabad&output=embed">
         </iframe>
     </div>
 
+</div>
+
+<div class="footer">
+    © FLARE-2027 | University of Hyderabad | All Rights Reserved
 </div>
 
 </body>
