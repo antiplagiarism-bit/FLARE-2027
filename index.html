@@ -51,36 +51,11 @@ body{
 
 /* Hero */
 
-```css
 .hero{
     position:relative;
+    background:url("banner.png") center center/cover no-repeat;
     min-height:500px;
-    overflow:hidden;
 }
-
-.hero-slider{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:1;
-}
-
-.hero-slider img{
-    position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-
-.hero-slider img.active{
-    opacity:1;
-}
-```
-
 
 .logo-left{
     position:absolute;
@@ -105,7 +80,6 @@ body{
     border-radius:10px;
     max-width:700px;
     text-align:right;
-    z-index:10;
 }
 
 .hero-box h1{
@@ -214,10 +188,7 @@ body{
     text-align:center;
 }
 
-.logo-left{
-    width:70px;
-}
-
+.logo-left,
 .logo-right{
     width:70px;
 }
@@ -225,6 +196,7 @@ body{
 .hero-box h1{
     font-size:28px;
 }
+
 }
 </style>
 </head>
@@ -254,24 +226,23 @@ body{
 </div>
 
 <section class="hero">
-    <div class="hero-slider">
-        <img src="uoh-main.png" class="active" alt="UoH Main">
-        <img src="igm-library.png" alt="IGM Library">
-        <img src="uoh-forest.png" alt="UoH Forest">
-        <img src="uoh.jpg" alt="UoH Campus">
-        <img src="banner.png" alt="Banner">
-    </div>
 
     <img src="ila.png" class="logo-left" alt="ILA Logo">
-    <img src="uoh.jpg" class="logo-right" alt="UoH Logo">
+
+    <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad">
 
     <div class="hero-box">
         <h1>72nd ILA International Conference</h1>
+
         <h2>Future Libraries: Advancing Research & Excellence (FLARE-2027)</h2>
+
         <p><strong>7–9 January 2027</strong></p>
+
         <p>University of Hyderabad</p>
     </div>
+
 </section>
+
 <section class="about-section">
 
 <div class="about-text">
@@ -279,11 +250,11 @@ body{
 <h2>About the Conference</h2>
 
 <p>
-The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the 72nd ILA International Conference on <strong>Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong>. The conference aims to bring together librarians, information professionals, researchers, academicians, students, policymakers, and technology experts to discuss emerging trends and innovations in library and information science.
+The Indian Library Association (ILA), in collaboration with the University of Hyderabad, is organizing the 72nd ILA International Conference on <strong>Future Libraries: Advancing Research & Excellence (FLARE-2027)</strong>.
 </p>
 
 <p>
-The event will feature keynote lectures, invited talks, paper presentations, workshops, and networking opportunities focusing on Artificial Intelligence, Smart Libraries, Open Science, Research Data Management, Digital Preservation, Sustainable Development, and future-ready library services.
+The conference will bring together librarians, researchers, academicians, students, policymakers, and technology experts to discuss emerging trends, Artificial Intelligence, Open Science, Digital Libraries, Research Data Management, and future-ready library services.
 </p>
 
 <a href="about.html" class="readmore">Read More</a>
@@ -315,15 +286,6 @@ Hyderabad – 500046
 <p>© 2027 Indian Library Association (ILA)</p>
 
 </footer>
-<script>
-const slides = document.querySelectorAll(".hero-slider img");
-let current = 0;
 
-setInterval(() => {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-}, 4000);
-</script>
 </body>
-
+</html>
