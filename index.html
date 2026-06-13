@@ -51,10 +51,32 @@ body{
 
 /* Hero */
 
+```css
 .hero{
     position:relative;
-    background:url("banner.png") center center/cover no-repeat;
     min-height:500px;
+    overflow:hidden;
+}
+
+.hero-slider{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.hero-slider img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1.5s ease-in-out;
+}
+
+.hero-slider img.active{
+    opacity:1;
 }
 
 .logo-left{
@@ -224,20 +246,23 @@ body{
 📢 Conference Dates: 07–09 January 2027
 </marquee>
 </div>
-
+    
 <section class="hero">
 
-    <img src="ila.png" class="logo-left" alt="ILA Logo">
+    <div class="hero-slider">
+        <img src="uoh-main.png" class="active" alt="University of Hyderabad">
+        <img src="igm-library.png" alt="IGM Library">
+        <img src="uoh-forest.png" alt="UoH Forest">
+        <img src="banner.png" alt="Conference Banner">
+    </div>
 
-    <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad">
+    <img src="ila.png" class="logo-left" alt="ILA Logo">
+    <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad Logo">
 
     <div class="hero-box">
         <h1>72nd ILA International Conference</h1>
-
         <h2>Future Libraries: Advancing Research & Excellence (FLARE-2027)</h2>
-
         <p><strong>7–9 January 2027</strong></p>
-
         <p>University of Hyderabad</p>
     </div>
 
@@ -286,6 +311,15 @@ Hyderabad – 500046
 <p>© 2027 Indian Library Association (ILA)</p>
 
 </footer>
+<script>
+const slides = document.querySelectorAll(".hero-slider img");
+let current = 0;
 
+setInterval(function () {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+}, 4000);
+</script>
 </body>
-</html>
+
