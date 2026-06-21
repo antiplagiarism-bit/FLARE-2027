@@ -127,13 +127,24 @@ body{
 
 .about-image{
     flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .about-image img{
-    width:500%;
-    border-radius:10px;
+    width:100%;
+    max-width:500px;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    transition:transform 0.3s ease;
+    object-fit:cover;
 }
 
+.about-image img:hover{
+    transform:scale(1.03);
+}
 .readmore{
     display:inline-block;
     background:#800000;
