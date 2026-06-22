@@ -29,12 +29,40 @@ body{
 }
 
 .header h1{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:8px;
 }
 
 .header p{
     font-size:20px;
+}
+
+/* Hero Banner */
+
+.hero-banner{
+    width:100%;
+    height:360px;
+    background:url('papers-banner.jpg') center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-overlay{
+    background:rgba(0,33,71,0.65);
+    padding:35px 45px;
+    border-radius:10px;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-overlay h2{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.hero-overlay p{
+    font-size:22px;
 }
 
 /* Navigation */
@@ -48,111 +76,95 @@ body{
 .nav a{
     color:#fff;
     text-decoration:none;
-    margin:0 14px;
+    margin:0 15px;
     font-weight:bold;
-    transition:.3s;
 }
 
 .nav a:hover{
     color:#FFD700;
 }
 
-/* Container */
+/* Buttons */
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:30px;
+}
+
+.action-buttons a{
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn-red{background:#b22222;}
+.btn-blue{background:#0056b3;}
+.btn-green{background:#198754;}
 
 .container{
     width:92%;
     max-width:1300px;
-    margin:30px auto;
+    margin:auto;
 }
 
-/* Intro Box */
-
-.intro-box{
-    background:#ffffff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom:30px;
-}
-
-.intro-box h2{
-    color:#002147;
-    margin-bottom:15px;
-    border-left:6px solid #800000;
-    padding-left:12px;
-}
-
-.intro-box p{
-    text-align:justify;
-}
-
-/* Theme Banner */
-
-.theme-banner{
-    background:linear-gradient(135deg,#0b5ed7,#002147);
-    color:#fff;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.theme-banner h2{
-    font-size:32px;
-}
-
-.theme-banner p{
-    font-size:20px;
-    margin-top:10px;
-}
-
-/* Theme Cards */
-
+.intro-box,
 .theme-card{
     background:#fff;
     padding:25px;
-    margin-bottom:25px;
-    border-left:6px solid #800000;
+    margin:25px 0;
     border-radius:8px;
     box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
+.intro-box h2,
 .theme-card h3{
     color:#002147;
-    margin-bottom:15px;
 }
 
-.theme-card ul{
-    padding-left:22px;
+.theme-banner{
+    background:linear-gradient(135deg,#0b5ed7,#002147);
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    border-radius:8px;
+    margin:30px 0;
 }
-
-.theme-card li{
-    margin-bottom:8px;
-}
-
-/* Footer */
 
 .footer{
     background:#002147;
     color:#fff;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:40px;
 }
 
 @media(max-width:768px){
 
-.header h1{
-    font-size:28px;
+.hero-banner{
+    height:240px;
 }
 
-.theme-banner h2{
-    font-size:24px;
+.hero-overlay h2{
+    font-size:30px;
+}
+
+.hero-overlay p{
+    font-size:16px;
 }
 
 .nav a{
     display:inline-block;
     margin:8px;
+}
+
+.action-buttons{
+    flex-direction:column;
+    align-items:center;
 }
 
 }
@@ -163,7 +175,21 @@ body{
 
 <div class="header">
     <h1>FLARE-2027</h1>
-    <p>72<sup>nd</sup> ILA International Conference – Call for Papers</p>
+    <p>72<sup>nd</sup> ILA International Conference</p>
+</div>
+
+<section class="hero-banner">
+    <div class="hero-overlay">
+        <h2>CALL FOR PAPERS</h2>
+        <p>Future Libraries: Advancing Research &amp; Excellence</p>
+        <p>7–9 January 2027 | University of Hyderabad</p>
+    </div>
+</section>
+
+<div class="action-buttons">
+    <a href="#" class="btn-red">📄 Submit Paper</a>
+    <a href="brochure.pdf" class="btn-blue">⬇ Download Brochure</a>
+    <a href="#" class="btn-green">📘 Author Guidelines</a>
 </div>
 
 <div class="nav">
@@ -178,32 +204,31 @@ body{
 <div class="container">
 
 <div class="intro-box">
+    <h2>Call for Papers</h2>
 
-<h2>Call for Papers</h2>
+    <p>
+        The Organizing Committee of the 72nd ILA International Conference
+        invites original research papers, case studies, innovative practices,
+        and scholarly contributions from librarians, faculty members,
+        researchers, students, information professionals, and industry experts.
+    </p>
 
-<p>
-The Organizing Committee of the 72nd ILA International Conference invites original research papers, case studies, innovative practices, and scholarly contributions from librarians, faculty members, researchers, students, information professionals, and industry experts.
-</p>
-
-<p>
-The conference provides a premier platform to exchange ideas, showcase innovations, and discuss emerging trends shaping the future of libraries and information services in the era of Artificial Intelligence, digital transformation, and research excellence.
-</p>
-
+    <p>
+        The conference provides an international platform for exchanging ideas,
+        showcasing innovations, and discussing emerging trends in Artificial
+        Intelligence, Digital Libraries, Open Science, Research Data Management,
+        and future-ready information services.
+    </p>
 </div>
 
 <div class="theme-banner">
-
-<h2>Conference Theme</h2>
-
-<p>
-Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
-</p>
-
+    <h2>Conference Theme</h2>
+    <p>Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)</p>
 </div>
     
-<!-- Theme 1 -->
+<!-- ===================== Theme 1 ===================== -->
 <div class="theme-card">
-    <h3>1. Libraries as Drivers of Sustainable Development</h3>
+    <h3>🌱 1. Libraries as Drivers of Sustainable Development</h3>
     <ul>
         <li>Green Libraries and Sustainable Infrastructure</li>
         <li>Libraries and Sustainable Development Goals (SDGs)</li>
@@ -214,9 +239,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 2 -->
+<!-- ===================== Theme 2 ===================== -->
 <div class="theme-card">
-    <h3>2. Artificial Intelligence and Digital Transformation</h3>
+    <h3>🤖 2. Artificial Intelligence and Digital Transformation</h3>
     <ul>
         <li>Artificial Intelligence in Library Services</li>
         <li>Machine Learning and Intelligent Information Retrieval</li>
@@ -227,9 +252,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 3 -->
+<!-- ===================== Theme 3 ===================== -->
 <div class="theme-card">
-    <h3>3. Research Support and Scholarly Communication</h3>
+    <h3>📚 3. Research Support and Scholarly Communication</h3>
     <ul>
         <li>Open Science and Open Access</li>
         <li>Research Data Management</li>
@@ -240,9 +265,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 4 -->
+<!-- ===================== Theme 4 ===================== -->
 <div class="theme-card">
-    <h3>4. Library Leadership and Policy Framework</h3>
+    <h3>🏛️ 4. Library Leadership and Policy Framework</h3>
     <ul>
         <li>Strategic Planning for Libraries</li>
         <li>Quality Assurance and Accreditation</li>
@@ -252,9 +277,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 5 -->
+<!-- ===================== Theme 5 ===================== -->
 <div class="theme-card">
-    <h3>5. Inclusive Libraries and Assistive Technologies</h3>
+    <h3>♿ 5. Inclusive Libraries and Assistive Technologies</h3>
     <ul>
         <li>Accessible Library Services</li>
         <li>Assistive Technologies for Persons with Disabilities</li>
@@ -264,9 +289,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 6 -->
+<!-- ===================== Theme 6 ===================== -->
 <div class="theme-card">
-    <h3>6. Collaborative Knowledge Networks</h3>
+    <h3>🤝 6. Collaborative Knowledge Networks</h3>
     <ul>
         <li>Library Consortia and Resource Sharing</li>
         <li>University–Industry Collaboration</li>
@@ -276,9 +301,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 7 -->
+<!-- ===================== Theme 7 ===================== -->
 <div class="theme-card">
-    <h3>7. Digital Preservation and Cultural Heritage</h3>
+    <h3>🗄️ 7. Digital Preservation and Cultural Heritage</h3>
     <ul>
         <li>Digitization of Rare Collections</li>
         <li>Archives and Manuscript Preservation</li>
@@ -287,9 +312,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 8 -->
+<!-- ===================== Theme 8 ===================== -->
 <div class="theme-card">
-    <h3>8. Legal and Ethical Issues</h3>
+    <h3>⚖️ 8. Legal and Ethical Issues</h3>
     <ul>
         <li>Copyright and Intellectual Property Rights</li>
         <li>Academic Integrity</li>
@@ -299,9 +324,9 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- Theme 9 -->
+<!-- ===================== Theme 9 ===================== -->
 <div class="theme-card">
-    <h3>9. Libraries and Digital Media</h3>
+    <h3>📱 9. Libraries and Digital Media</h3>
     <ul>
         <li>Social Media Engagement</li>
         <li>Digital Marketing of Library Services</li>
@@ -310,31 +335,29 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
         <li>User Analytics and Community Outreach</li>
     </ul>
 </div>
+
 <!-- ===================== Submission Guidelines ===================== -->
-
 <div class="theme-card">
-    <h3>Paper Submission Guidelines</h3>
-
+    <h3>📝 Paper Submission Guidelines</h3>
     <ul>
         <li>Only original and unpublished research papers should be submitted.</li>
         <li>Papers must be written in clear academic English.</li>
-        <li>The manuscript should include Title, Abstract, Keywords, Main Text, and References.</li>
-        <li>Authors are responsible for ensuring plagiarism-free content and proper citation of sources.</li>
-        <li>All submitted papers will undergo peer review by the Technical Committee.</li>
-        <li>At least one author of each accepted paper must register and present the paper during the conference.</li>
-        <li>Selected papers may be considered for publication in the conference proceedings, subject to editorial review.</li>
+        <li>Include Title, Abstract, Keywords, Main Text, and References.</li>
+        <li>Ensure plagiarism-free content and proper citation of sources.</li>
+        <li>All submissions will undergo peer review.</li>
+        <li>At least one author of each accepted paper must register and present the paper.</li>
+        <li>Selected papers may be published in the conference proceedings.</li>
     </ul>
 </div>
 
 <!-- ===================== Important Dates ===================== -->
-
 <div class="theme-card">
-    <h3>Important Dates</h3>
+    <h3>📅 Important Dates</h3>
 
     <table style="width:100%;border-collapse:collapse;">
         <tr style="background:#002147;color:#fff;">
-            <th style="padding:12px;border:1px solid #ddd;">Event</th>
-            <th style="padding:12px;border:1px solid #ddd;">Date</th>
+            <th style="padding:10px;border:1px solid #ddd;">Activity</th>
+            <th style="padding:10px;border:1px solid #ddd;">Date</th>
         </tr>
 
         <tr>
@@ -353,21 +376,21 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
         </tr>
 
         <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Early Registration Closes</td>
+            <td style="padding:10px;border:1px solid #ddd;">Registration Deadline</td>
             <td style="padding:10px;border:1px solid #ddd;">15 December 2026</td>
         </tr>
 
         <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Conference Dates</td>
+            <td style="padding:10px;border:1px solid #ddd;"><strong>Conference Dates</strong></td>
             <td style="padding:10px;border:1px solid #ddd;"><strong>7–9 January 2027</strong></td>
         </tr>
     </table>
 </div>
 
-<!-- ===================== Presentation Types ===================== -->
+<!-- ===================== Presentation Categories ===================== -->
 
 <div class="theme-card">
-    <h3>Presentation Categories</h3>
+    <h3>🎤 Presentation Categories</h3>
 
     <ul>
         <li>Research Paper Presentation</li>
@@ -379,22 +402,50 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </ul>
 </div>
 
-<!-- ===================== Closing Message ===================== -->
+<!-- ===================== Invitation ===================== -->
 
 <div class="theme-card">
-    <h3>Invitation</h3>
+    <h3>📢 Invitation to Authors</h3>
 
     <p style="text-align:justify;">
-        The Organizing Committee warmly invites researchers, librarians,
-        faculty members, students, information professionals, innovators,
-        and policymakers from India and abroad to contribute their research
-        and participate in FLARE-2027. The conference aims to foster
-        collaboration, encourage innovation, and shape the future of
-        libraries through meaningful discussions and knowledge exchange.
+        The Organizing Committee of the 72<sup>nd</sup> ILA International
+        Conference warmly invites librarians, faculty members, researchers,
+        information professionals, policymakers, students, and industry
+        experts from India and abroad to submit original research papers
+        and participate in FLARE-2027.
+    </p>
+
+    <p style="text-align:justify;">
+        The conference aims to foster innovation, encourage interdisciplinary
+        collaboration, and explore emerging technologies that will shape
+        the future of libraries and information services.
+    </p>
+
+    <p style="text-align:justify;">
+        Accepted papers will be presented during the conference and selected
+        contributions may be considered for publication in the conference
+        proceedings, subject to the review process and editorial policies.
     </p>
 </div>
 
+<!-- ===================== Contact Section ===================== -->
+
+<div class="theme-card">
+    <h3>📧 Contact for Paper Submission</h3>
+
+    <p>
+        <strong>Email:</strong> 72ilaconferencehyd@gmail.com
+    </p>
+
+    <p>
+        <strong>Venue:</strong><br>
+        Indira Gandhi Memorial Library<br>
+        University of Hyderabad<br>
+        Hyderabad – 500046
+    </p>
 </div>
+
+</div> <!-- End .container -->
 
 <!-- ===================== Footer ===================== -->
 
@@ -417,10 +468,10 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
     </p>
 
     <p>
-        Email: 72ilaconferencehyd@gmail.com
+        📧 Email: 72ilaconferencehyd@gmail.com
     </p>
 
-    <p>
+    <p style="margin-top:10px;">
         © 2027 Indian Library Association (ILA). All Rights Reserved.
     </p>
 
@@ -428,3 +479,5 @@ Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
 
 </body>
 </html>
+
+
