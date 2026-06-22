@@ -3,481 +3,408 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Call for Papers | FLARE-2027</title>
 
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
     color:#333;
-    line-height:1.8;
-}
-
-/* Header */
-
-.header{
-    background:linear-gradient(135deg,#002147,#003d73);
-    color:#fff;
-    text-align:center;
-    padding:35px 20px;
-}
-
-.header h1{
-    font-size:42px;
-    margin-bottom:8px;
-}
-
-.header p{
-    font-size:20px;
-}
-
-/* Hero Banner */
-
-.hero-banner{
-    width:100%;
-    height:360px;
-    background:url('papers-banner.jpg') center center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero-overlay{
-    background:rgba(0,33,71,0.65);
-    padding:35px 45px;
-    border-radius:10px;
-    text-align:center;
-    color:#fff;
-}
-
-.hero-overlay h2{
-    font-size:48px;
-    margin-bottom:12px;
-}
-
-.hero-overlay p{
-    font-size:22px;
 }
 
 /* Navigation */
 
-.nav{
+.navbar{
     background:#800000;
-    text-align:center;
-    padding:14px;
 }
 
-.nav a{
+.navbar-brand,
+.nav-link{
+    color:#fff !important;
+    font-weight:600;
+}
+
+.nav-link:hover{
+    color:#ffd700 !important;
+}
+
+/* Hero Banner */
+
+.hero{
+    background:url('papers-banner.jpg') center center/cover no-repeat;
+    min-height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,33,71,0.60);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
     color:#fff;
-    text-decoration:none;
-    margin:0 15px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:56px;
     font-weight:bold;
 }
 
-.nav a:hover{
-    color:#FFD700;
+.hero-content p{
+    font-size:22px;
 }
 
 /* Buttons */
 
-.action-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin:30px;
-}
-
-.action-buttons a{
-    color:#fff;
-    text-decoration:none;
-    padding:14px 28px;
-    border-radius:8px;
+.action-btn{
+    margin:8px;
+    padding:12px 28px;
     font-weight:bold;
 }
 
-.btn-red{background:#b22222;}
-.btn-blue{background:#0056b3;}
-.btn-green{background:#198754;}
+/* Cards */
 
-.container{
-    width:92%;
-    max-width:1300px;
-    margin:auto;
-}
-
-.intro-box,
 .theme-card{
-    background:#fff;
-    padding:25px;
-    margin:25px 0;
-    border-radius:8px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    border:none;
+    border-left:6px solid #800000;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.intro-box h2,
-.theme-card h3{
+.theme-card:hover{
+    transform:translateY(-4px);
+}
+
+.section-title{
     color:#002147;
+    font-weight:bold;
 }
 
-.theme-banner{
-    background:linear-gradient(135deg,#0b5ed7,#002147);
-    color:#fff;
-    text-align:center;
-    padding:25px;
-    border-radius:8px;
-    margin:30px 0;
-}
+/* Important Dates */
 
-.footer{
+.date-card{
     background:#002147;
     color:#fff;
+    border-radius:10px;
+    padding:18px;
     text-align:center;
-    padding:25px;
-    margin-top:40px;
+    height:100%;
+}
+
+.date-card h5{
+    color:#ffd700;
+}
+
+/* Footer */
+
+footer{
+    background:#002147;
+    color:#fff;
+    padding:35px 0;
+    margin-top:50px;
+    text-align:center;
 }
 
 @media(max-width:768px){
 
-.hero-banner{
-    height:240px;
+.hero{
+    min-height:300px;
 }
 
-.hero-overlay h2{
-    font-size:30px;
+.hero-content h1{
+    font-size:34px;
 }
 
-.hero-overlay p{
-    font-size:16px;
-}
-
-.nav a{
-    display:inline-block;
-    margin:8px;
-}
-
-.action-buttons{
-    flex-direction:column;
-    align-items:center;
+.hero-content p{
+    font-size:17px;
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="header">
-    <h1>FLARE-2027</h1>
-    <p>72<sup>nd</sup> ILA International Conference</p>
-</div>
+<!-- ================= NAVBAR ================= -->
 
-<section class="hero-banner">
-    <div class="hero-overlay">
-        <h2>CALL FOR PAPERS</h2>
-        <p>Future Libraries: Advancing Research &amp; Excellence</p>
-        <p>7–9 January 2027 | University of Hyderabad</p>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">FLARE-2027</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="papers.html">Call for Papers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="committee.html">Committee</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO BANNER ================= -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Call for Papers</h1>
+
+        <p class="mb-3">
+            72<sup>nd</sup> ILA International Conference
+        </p>
+
+        <h3 class="fw-bold">
+            Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
+        </h3>
+
+        <p class="mt-3">
+            7–9 January 2027 • University of Hyderabad
+        </p>
+
+        <div class="mt-4">
+
+            <a href="registration.html"
+               class="btn btn-danger btn-lg action-btn">
+                <i class="bi bi-upload"></i>
+                Submit Paper
+            </a>
+
+            <a href="brochure.pdf"
+               class="btn btn-primary btn-lg action-btn">
+                <i class="bi bi-download"></i>
+                Download Brochure
+            </a>
+
+            <a href="author-guidelines.pdf"
+               class="btn btn-success btn-lg action-btn">
+                <i class="bi bi-file-earmark-text"></i>
+                Author Guidelines
+            </a>
+
+        </div>
+
     </div>
 </section>
 
-<div class="action-buttons">
-    <a href="#" class="btn-red">📄 Submit Paper</a>
-    <a href="brochure.pdf" class="btn-blue">⬇ Download Brochure</a>
-    <a href="#" class="btn-green">📘 Author Guidelines</a>
+<!-- ================= INTRODUCTION ================= -->
+
+<div class="container py-5">
+
+    <div class="card shadow-sm border-0 p-4 mb-5">
+
+        <h2 class="section-title mb-3">
+            <i class="bi bi-journal-richtext"></i>
+            Call for Papers
+        </h2>
+
+        <p style="text-align:justify;">
+            The Organizing Committee of the
+            <strong>72nd ILA International Conference (FLARE-2027)</strong>
+            invites original research papers, review papers, case studies,
+            best practices, innovative projects, and scholarly contributions
+            from librarians, faculty members, researchers, students,
+            information professionals, policymakers, and industry experts.
+        </p>
+
+        <p style="text-align:justify;">
+            FLARE-2027 provides a global platform for exchanging ideas on
+            Artificial Intelligence, Digital Libraries, Open Science,
+            Research Data Management, Scholarly Communication,
+            Emerging Technologies, Sustainable Libraries,
+            and Future-Ready Information Services.
+        </p>
+
+    </div>
+
+    <!-- ================= MAIN THEME ================= -->
+
+    <div class="alert alert-primary text-center p-4 shadow-sm">
+
+        <h2 class="mb-2">
+            Conference Theme
+        </h2>
+
+        <h3 class="fw-bold">
+            Future Libraries:
+            Advancing Research &amp; Excellence (FLARE-2027)
+        </h3>
+
+    </div>
+<!-- ================= THEMES ================= -->
+
+<div class="container py-4">
+
+    <h2 class="section-title text-center mb-4">
+        Conference Themes
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-cpu"></i> AI in Libraries</h5>
+                <p>Artificial Intelligence applications in modern library services and automation.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-cloud"></i> Digital Libraries</h5>
+                <p>Digital transformation, repositories, and cloud-based library systems.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-journal-bookmark"></i> Open Access</h5>
+                <p>Open science, open data, and scholarly communication models.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-bar-chart"></i> Bibliometrics</h5>
+                <p>Research impact analysis, scientometrics, and altmetrics studies.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-shield-lock"></i> Data Ethics</h5>
+                <p>Research ethics, plagiarism prevention, and data privacy in academia.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card theme-card p-3 h-100">
+                <h5><i class="bi bi-people"></i> User Experience</h5>
+                <p>Library user behavior, services design, and accessibility improvements.</p>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<div class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="papers.html">Call for Papers</a>
-    <a href="registration.html">Registration</a>
-    <a href="committee.html">Committee</a>
-    <a href="contact.html">Contact</a>
+<!-- ================= IMPORTANT DATES ================= -->
+
+<div class="container py-5">
+
+    <h2 class="section-title text-center mb-4">
+        Important Dates
+    </h2>
+
+    <div class="row g-3">
+
+        <div class="col-md-3">
+            <div class="date-card">
+                <h5>Abstract Submission</h5>
+                <p>30 Sept 2026</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="date-card">
+                <h5>Full Paper</h5>
+                <p>31 Oct 2026</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="date-card">
+                <h5>Acceptance</h5>
+                <p>15 Nov 2026</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="date-card">
+                <h5>Conference</h5>
+                <p>7–9 Jan 2027</p>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<div class="container">
+<!-- ================= GUIDELINES ================= -->
 
-<div class="intro-box">
-    <h2>Call for Papers</h2>
+<div class="container py-4">
 
-    <p>
-        The Organizing Committee of the 72nd ILA International Conference
-        invites original research papers, case studies, innovative practices,
-        and scholarly contributions from librarians, faculty members,
-        researchers, students, information professionals, and industry experts.
-    </p>
+    <div class="card shadow-sm p-4 border-0">
 
-    <p>
-        The conference provides an international platform for exchanging ideas,
-        showcasing innovations, and discussing emerging trends in Artificial
-        Intelligence, Digital Libraries, Open Science, Research Data Management,
-        and future-ready information services.
-    </p>
+        <h2 class="section-title mb-3">
+            Author Guidelines
+        </h2>
+
+        <ul>
+            <li>Paper must be original and unpublished.</li>
+            <li>Use IEEE/APA format for references.</li>
+            <li>Maximum 6000 words allowed.</li>
+            <li>Plagiarism should be below 10%.</li>
+            <li>Submit in Word/PDF format only.</li>
+        </ul>
+
+    </div>
 </div>
 
-<div class="theme-banner">
-    <h2>Conference Theme</h2>
-    <p>Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)</p>
-</div>
-    
-<!-- ===================== Theme 1 ===================== -->
-<div class="theme-card">
-    <h3>🌱 1. Libraries as Drivers of Sustainable Development</h3>
-    <ul>
-        <li>Green Libraries and Sustainable Infrastructure</li>
-        <li>Libraries and Sustainable Development Goals (SDGs)</li>
-        <li>Digital Preservation and Long-term Knowledge Sustainability</li>
-        <li>Carbon-Neutral Library Practices</li>
-        <li>Smart Libraries for Sustainable Communities</li>
-        <li>AI Applications for Sustainable Library Services</li>
-    </ul>
-</div>
+<!-- ================= FOOTER ================= -->
 
-<!-- ===================== Theme 2 ===================== -->
-<div class="theme-card">
-    <h3>🤖 2. Artificial Intelligence and Digital Transformation</h3>
-    <ul>
-        <li>Artificial Intelligence in Library Services</li>
-        <li>Machine Learning and Intelligent Information Retrieval</li>
-        <li>AI-powered Cataloguing and Metadata Generation</li>
-        <li>Cloud-based Library Management Systems</li>
-        <li>Semantic Web and Linked Open Data</li>
-        <li>Blockchain and Emerging Technologies</li>
-    </ul>
-</div>
+<footer>
+    <div class="container">
+        <p class="mb-1 fw-bold">FLARE-2027 Conference</p>
+        <p>University of Hyderabad, India</p>
+        <p>Email: info@flare2027.org | Phone: +91-XXXXXXXXXX</p>
+        <p class="mt-3">© 2026 FLARE-2027. All Rights Reserved.</p>
+    </div>
+</footer>
 
-<!-- ===================== Theme 3 ===================== -->
-<div class="theme-card">
-    <h3>📚 3. Research Support and Scholarly Communication</h3>
-    <ul>
-        <li>Open Science and Open Access</li>
-        <li>Research Data Management</li>
-        <li>Institutional Repositories</li>
-        <li>Bibliometrics, Scientometrics and Altmetrics</li>
-        <li>Research Integrity and Publication Ethics</li>
-        <li>One Nation One Subscription (ONOS)</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 4 ===================== -->
-<div class="theme-card">
-    <h3>🏛️ 4. Library Leadership and Policy Framework</h3>
-    <ul>
-        <li>Strategic Planning for Libraries</li>
-        <li>Quality Assurance and Accreditation</li>
-        <li>E-Governance in Libraries</li>
-        <li>Professional Development and Capacity Building</li>
-        <li>Library Marketing and Advocacy</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 5 ===================== -->
-<div class="theme-card">
-    <h3>♿ 5. Inclusive Libraries and Assistive Technologies</h3>
-    <ul>
-        <li>Accessible Library Services</li>
-        <li>Assistive Technologies for Persons with Disabilities</li>
-        <li>Inclusive Digital Resources</li>
-        <li>Multilingual Information Access</li>
-        <li>Diversity, Equity and Inclusion in Libraries</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 6 ===================== -->
-<div class="theme-card">
-    <h3>🤝 6. Collaborative Knowledge Networks</h3>
-    <ul>
-        <li>Library Consortia and Resource Sharing</li>
-        <li>University–Industry Collaboration</li>
-        <li>Knowledge Management Systems</li>
-        <li>Global Research Partnerships</li>
-        <li>Citizen Science Initiatives</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 7 ===================== -->
-<div class="theme-card">
-    <h3>🗄️ 7. Digital Preservation and Cultural Heritage</h3>
-    <ul>
-        <li>Digitization of Rare Collections</li>
-        <li>Archives and Manuscript Preservation</li>
-        <li>Digital Humanities Projects</li>
-        <li>Long-term Preservation Technologies</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 8 ===================== -->
-<div class="theme-card">
-    <h3>⚖️ 8. Legal and Ethical Issues</h3>
-    <ul>
-        <li>Copyright and Intellectual Property Rights</li>
-        <li>Academic Integrity</li>
-        <li>Plagiarism Detection</li>
-        <li>Data Privacy and Information Ethics</li>
-        <li>Predatory Publishing</li>
-    </ul>
-</div>
-
-<!-- ===================== Theme 9 ===================== -->
-<div class="theme-card">
-    <h3>📱 9. Libraries and Digital Media</h3>
-    <ul>
-        <li>Social Media Engagement</li>
-        <li>Digital Marketing of Library Services</li>
-        <li>Information Literacy</li>
-        <li>Misinformation and Fact Checking</li>
-        <li>User Analytics and Community Outreach</li>
-    </ul>
-</div>
-
-<!-- ===================== Submission Guidelines ===================== -->
-<div class="theme-card">
-    <h3>📝 Paper Submission Guidelines</h3>
-    <ul>
-        <li>Only original and unpublished research papers should be submitted.</li>
-        <li>Papers must be written in clear academic English.</li>
-        <li>Include Title, Abstract, Keywords, Main Text, and References.</li>
-        <li>Ensure plagiarism-free content and proper citation of sources.</li>
-        <li>All submissions will undergo peer review.</li>
-        <li>At least one author of each accepted paper must register and present the paper.</li>
-        <li>Selected papers may be published in the conference proceedings.</li>
-    </ul>
-</div>
-
-<!-- ===================== Important Dates ===================== -->
-<div class="theme-card">
-    <h3>📅 Important Dates</h3>
-
-    <table style="width:100%;border-collapse:collapse;">
-        <tr style="background:#002147;color:#fff;">
-            <th style="padding:10px;border:1px solid #ddd;">Activity</th>
-            <th style="padding:10px;border:1px solid #ddd;">Date</th>
-        </tr>
-
-        <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Abstract Submission</td>
-            <td style="padding:10px;border:1px solid #ddd;">31 July 2026</td>
-        </tr>
-
-        <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Full Paper Submission</td>
-            <td style="padding:10px;border:1px solid #ddd;">15 August 2026</td>
-        </tr>
-
-        <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Acceptance Notification</td>
-            <td style="padding:10px;border:1px solid #ddd;">15 September 2026</td>
-        </tr>
-
-        <tr>
-            <td style="padding:10px;border:1px solid #ddd;">Registration Deadline</td>
-            <td style="padding:10px;border:1px solid #ddd;">15 December 2026</td>
-        </tr>
-
-        <tr>
-            <td style="padding:10px;border:1px solid #ddd;"><strong>Conference Dates</strong></td>
-            <td style="padding:10px;border:1px solid #ddd;"><strong>7–9 January 2027</strong></td>
-        </tr>
-    </table>
-</div>
-
-<!-- ===================== Presentation Categories ===================== -->
-
-<div class="theme-card">
-    <h3>🎤 Presentation Categories</h3>
-
-    <ul>
-        <li>Research Paper Presentation</li>
-        <li>Poster Presentation</li>
-        <li>Case Study Presentation</li>
-        <li>Best Practice Demonstration</li>
-        <li>Industry & Technology Showcase</li>
-        <li>Student Research Presentation</li>
-    </ul>
-</div>
-
-<!-- ===================== Invitation ===================== -->
-
-<div class="theme-card">
-    <h3>📢 Invitation to Authors</h3>
-
-    <p style="text-align:justify;">
-        The Organizing Committee of the 72<sup>nd</sup> ILA International
-        Conference warmly invites librarians, faculty members, researchers,
-        information professionals, policymakers, students, and industry
-        experts from India and abroad to submit original research papers
-        and participate in FLARE-2027.
-    </p>
-
-    <p style="text-align:justify;">
-        The conference aims to foster innovation, encourage interdisciplinary
-        collaboration, and explore emerging technologies that will shape
-        the future of libraries and information services.
-    </p>
-
-    <p style="text-align:justify;">
-        Accepted papers will be presented during the conference and selected
-        contributions may be considered for publication in the conference
-        proceedings, subject to the review process and editorial policies.
-    </p>
-</div>
-
-<!-- ===================== Contact Section ===================== -->
-
-<div class="theme-card">
-    <h3>📧 Contact for Paper Submission</h3>
-
-    <p>
-        <strong>Email:</strong> 72ilaconferencehyd@gmail.com
-    </p>
-
-    <p>
-        <strong>Venue:</strong><br>
-        Indira Gandhi Memorial Library<br>
-        University of Hyderabad<br>
-        Hyderabad – 500046
-    </p>
-</div>
-
-</div> <!-- End .container -->
-
-<!-- ===================== Footer ===================== -->
-
-<div class="footer">
-
-    <h3>FLARE-2027</h3>
-
-    <p>
-        72<sup>nd</sup> ILA International Conference
-    </p>
-
-    <p>
-        Future Libraries: Advancing Research &amp; Excellence
-    </p>
-
-    <p>
-        Indira Gandhi Memorial Library<br>
-        University of Hyderabad<br>
-        Hyderabad – 500046
-    </p>
-
-    <p>
-        📧 Email: 72ilaconferencehyd@gmail.com
-    </p>
-
-    <p style="margin-top:10px;">
-        © 2027 Indian Library Association (ILA). All Rights Reserved.
-    </p>
-
-</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-
