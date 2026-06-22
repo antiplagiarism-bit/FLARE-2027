@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Conference | FLARE-2027</title>
+<title>About | FLARE-2027</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
+*{
     margin:0;
-    background:#f8f8f8;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
     line-height:1.8;
 }
+
+/* Header */
 
 .header{
     background:#002147;
@@ -21,18 +28,19 @@ body{
 }
 
 .header h1{
-    margin:0;
-    font-size:32px;
+    font-size:34px;
+    margin-bottom:10px;
 }
 
 .header p{
-    margin-top:8px;
     font-size:18px;
 }
 
+/* Navigation */
+
 .nav{
     background:#800000;
-    padding:12px;
+    padding:15px;
     text-align:center;
 }
 
@@ -47,22 +55,26 @@ body{
     color:#FFD700;
 }
 
+/* Main Container */
+
 .container{
-    width:90%;
+    width:92%;
     max-width:1400px;
     margin:30px auto;
 }
 
+/* Sections */
+
 .about-section{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
     background:#fff;
-    padding:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:35px;
     margin-bottom:35px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .about-text{
@@ -72,12 +84,14 @@ body{
 .about-text h2{
     color:#002147;
     border-bottom:3px solid #800000;
-    padding-bottom:8px;
+    display:inline-block;
     margin-bottom:20px;
+    padding-bottom:5px;
 }
 
 .about-text p{
     text-align:justify;
+    margin-bottom:15px;
     font-size:16px;
 }
 
@@ -90,16 +104,19 @@ body{
     width:100%;
     max-width:450px;
     border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
+
+/* Footer */
 
 .footer{
     background:#002147;
     color:#fff;
     text-align:center;
     padding:20px;
-    margin-top:30px;
 }
+
+/* Responsive */
 
 @media(max-width:768px){
 
@@ -113,129 +130,165 @@ body{
 
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
-    <h1>FLARE-2027 International Conference</h1>
-    <p>Future Libraries: Advancing Research & Excellence 2027 (FLARE-2027)</p>
+<h1>FLARE-2027</h1>
+<p>Future Libraries: Advancing Research & Excellence 2027</p>
 </div>
 
 <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="papers.html">Call for Papers</a>
-    <a href="registration.html">Registration</a>
-    <a href="committee.html">Committee</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="papers.html">Call for Papers</a>
+<a href="registration.html">Registration</a>
+<a href="committee.html">Committee</a>
+<a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
 
-    <!-- About Conference -->
-    <div class="about-section">
+<!-- About Conference -->
 
-        <div class="about-text">
+<div class="about-section">
 
-            <h2>About Conference</h2>
+<div class="about-text">
 
-            <p>
-            The Indian Library Association (ILA) is honoured to host its 72nd Annual Conference 2027 in the historic “City of Pearls,” in collaboration with the University of Hyderabad, an Institution of Eminence. This premier international summit serves as a global nexus for librarians, information scientists, academicians, and technology innovators.
-            </p>
+<h2>About Conference</h2>
 
-            <p>
-            As the digital and physical frontiers of information continue to merge, this conference provides a vital forum to examine the shifting paradigms of our field. This landmark event will help redefine the role of libraries as catalysts for global knowledge and social progress.
-            </p>
+<p>
+The Indian Library Association (ILA) is honoured to host its 72nd Annual Conference 2027 in the historic “City of Pearls,” in collaboration with the University of Hyderabad, an Institution of Eminence. This premier international summit serves as a global nexus for librarians, information scientists, academicians, students, policymakers, and technology innovators.
+</p>
 
-            <p>
-            The main theme of the conference is <strong>Future Libraries: Advancing Research & Excellence 2027 (FLARE-2027)</strong>. The conference focuses on emerging trends including Artificial Intelligence, Green Libraries, Digital Transformation, Research Data Management, and Sustainable Development.
-            </p>
+<p>
+As the digital and physical frontiers of information continue to merge, this conference provides a vital forum to examine the shifting paradigms of our field. This landmark event will help redefine the role of libraries as catalysts for global knowledge and social progress.
+</p>
 
-            <p>
-            The sessions will explore innovative technologies and the evolving role of libraries in empowering research, education, and knowledge societies.
-            </p>
+<p>
+The main theme of the conference is <strong>Future Libraries: Advancing Research & Excellence 2027 (FLARE-2027)</strong>. The conference focuses on Artificial Intelligence, Open Science, Digital Libraries, Green Libraries, Research Data Management, Assistive Technologies, and emerging innovations in Library and Information Science.
+</p>
 
-        </div>
+<p>
+Overall, the conference aims to promote collaboration, innovation, and excellence while highlighting the evolving role of libraries in research, education, and sustainable development.
+</p>
 
-        <div class="about-image">
-            <img src="about-conference.jpg" alt="About Conference">
-        </div>
+</div>
+
+<div class="about-image">
+<img src="about-conference.jpg" alt="About Conference">
+</div>
+
+</div>
+
+<!-- About University -->
+
+<div class="about-section">
+
+<div class="about-text">
+
+<h2>About University of Hyderabad</h2>
+
+<p>
+The University of Hyderabad was established on 2 October 1974 as a Central University by an Act of Parliament and has grown into one of India's leading institutions for higher education and research.
+</p>
+
+<p>
+Spread across nearly 2,500 acres, the University consists of 12 Schools and 42 Departments offering multidisciplinary programmes in sciences, humanities, engineering, management, fine arts, and social sciences.
+</p>
+
+<p>
+Recognized as an Institution of Eminence, the University is renowned for academic excellence, cutting-edge research, innovation, international collaborations, and an environmentally rich campus.
+</p>
+
+<p>
+With distinguished faculty members and talented students from across India and abroad, the University continues to contribute significantly to national development and global scholarship.
+</p>
+
+</div>
+
+<div class="about-image">
+<img src="uoh-campus.jpg" alt="University of Hyderabad">
+</div>
+
+</div>
+
+<!-- About Indira Gandhi Memorial Library -->
+
+<div class="about-section">
+
+    <div class="about-text">
+
+        <h2>About Indira Gandhi Memorial Library</h2>
+
+        <p>
+        The Indira Gandhi Memorial (IGM) Library of the University of Hyderabad is a premier academic library dedicated to supporting teaching, learning, research, and innovation. It serves thousands of faculty members, students, research scholars, and academic professionals with comprehensive print and digital information resources.
+        </p>
+
+        <p>
+        Inaugurated on 21 October 1988 by the late Dr. Shankar Dayal Sharma, the then Vice-President of India, the Library is named in honour of former Prime Minister Mrs. Indira Gandhi. Since its establishment, it has evolved into one of India's leading university libraries.
+        </p>
+
+        <p>
+        The Library houses more than 4.5 lakh books, journals, theses, dissertations, reports, manuscripts, and electronic resources covering a wide range of disciplines. It offers access to national and international scholarly databases, e-books, e-journals, institutional repositories, and research support platforms.
+        </p>
+
+        <p>
+        Equipped with modern technology and user-centric services, the IGM Library provides plagiarism detection, remote access facilities, digital reference services, citation support, research assistance, and advanced learning spaces. It continues to play a significant role in promoting academic excellence and lifelong learning.
+        </p>
 
     </div>
 
-    <!-- University -->
-    <div class="about-section">
-
-        <div class="about-text">
-
-            <h2>About University of Hyderabad</h2>
-
-            <p>
-            The University of Hyderabad, established in 1974, is one of India's premier institutions for higher education and research with a beautiful 2,500-acre campus.
-            </p>
-
-            <p>
-            Recognized as an Institution of Eminence, it offers multidisciplinary education and is internationally known for academic excellence, innovation, and research.
-            </p>
-
-        </div>
-
-        <div class="about-image">
-            <img src="uoh-campus.jpg" alt="University of Hyderabad">
-        </div>
-
-    </div>
-
-    <!-- IGM Library -->
-    <div class="about-section">
-
-        <div class="about-text">
-
-            <h2>About Indira Gandhi Memorial Library</h2>
-
-            <p>
-            The Indira Gandhi Memorial Library is the central library of the University of Hyderabad supporting teaching, learning, and research through extensive print and digital collections.
-            </p>
-
-            <p>
-            The Library provides modern digital services, scholarly databases, plagiarism support, research assistance, and advanced infrastructure for users.
-            </p>
-
-        </div>
-
-        <div class="about-image">
-            <img src="igm-library.jpg" alt="IGM Library">
-        </div>
-
-    </div>
-
-    <!-- ILA -->
-    <div class="about-section">
-
-        <div class="about-text">
-
-            <h2>About Indian Library Association (ILA)</h2>
-
-            <p>
-            Founded in 1933, the Indian Library Association is India's premier professional organization for library and information professionals, promoting education, research, innovation, and collaboration.
-            </p>
-
-            <p>
-            Through conferences, journals, workshops, and advocacy, ILA continues to strengthen the library movement and professional excellence across the country.
-            </p>
-
-        </div>
-
-        <div class="about-image">
-            <img src="ila.jpg" alt="Indian Library Association">
-        </div>
-
+    <div class="about-image">
+        <img src="igm-library.jpg" alt="Indira Gandhi Memorial Library">
     </div>
 
 </div>
 
+<!-- About Indian Library Association -->
+
+<div class="about-section">
+
+    <div class="about-text">
+
+        <h2>About Indian Library Association (ILA)</h2>
+
+        <p>
+        The Indian Library Association (ILA), established on 13 September 1933 during the All India Library Conference held in Calcutta, is the oldest and largest professional organization representing library and information professionals in India.
+        </p>
+
+        <p>
+        Registered under the Societies Registration Act, 1860, the Association has consistently worked towards strengthening library services, promoting professional education, encouraging research, and advancing information access across the country.
+        </p>
+
+        <p>
+        Through national and international conferences, seminars, workshops, publications, and training programmes, ILA provides an active platform for librarians, academicians, researchers, students, and information professionals to exchange ideas and discuss emerging trends in Library and Information Science.
+        </p>
+
+        <p>
+        The Association publishes scholarly resources including the Journal of Indian Library Association (JILA), newsletters, and conference proceedings while promoting innovation, ethical practices, digital transformation, collaboration, and professional excellence within the library community.
+        </p>
+
+    </div>
+
+    <div class="about-image">
+        <img src="ila.jpg" alt="Indian Library Association">
+    </div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
 <div class="footer">
-    © 2027 Indian Library Association (ILA) | FLARE-2027
+    <h3>FLARE-2027</h3>
+    <p>72<sup>nd</sup> ILA International Conference</p>
+    <p>Future Libraries: Advancing Research &amp; Excellence 2027</p>
+    <p>University of Hyderabad, Hyderabad – 500046</p>
+    <p>© 2027 Indian Library Association (ILA). All Rights Reserved.</p>
 </div>
 
 </body>
