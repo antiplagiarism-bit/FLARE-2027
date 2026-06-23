@@ -5,191 +5,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FLARE-2027 | 72nd ILA International Conference</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <style>
-body{
-    font-family: Arial, Helvetica, sans-serif;
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
-/* Navbar */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    line-height:1.7;
+}
+
+/* Navigation */
+
 .navbar{
-    background:#7b1113;
-    padding:12px 0;
+    background:#800000;
+    padding:15px;
+    text-align:center;
 }
 
-/* Navigation Menu */
-.navbar-brand,
-.nav-link{
-    color:#fff !important;
-    font-weight:700;
-    font-size:20px;      /* Font size పెరిగింది */
-    padding:12px 18px !important;
+.navbar a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-.nav-link:hover{
-    color:#FFD700 !important;
+.navbar a:hover{
+    color:#FFD700;
 }
 
-/* Hero Section */
+/* Announcement */
+
+.announcement{
+    background:#ffffff;
+    border-top:3px solid #002147;
+    border-bottom:3px solid #002147;
+    color:#002147;
+    padding:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* Hero */
 .hero{
-    position:relative;
-    height:700px;
-    overflow:hidden;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
 }
 
-.hero img.banner{
-    width:100%;
-    height:700px;
-    object-fit:cover;
+.hero-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.35);
+.hero-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .logo-left{
     position:absolute;
-    top:20px;
     left:20px;
+    top:20px;
     width:90px;
-    z-index:10;
+    z-index:2;
 }
 
 .logo-right{
     position:absolute;
-    top:20px;
     right:20px;
+    top:20px;
     width:90px;
-    z-index:10;
+    z-index:2;
 }
-
-.hero-content{
+.hero-box{
     position:absolute;
-    top:60px;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
+    right:40px;
+    top:120px;
+    z-index:2;
+    background:rgba(255,255,255,0.80);
+    padding:25px;
+    border-radius:10px;
+    max-width:700px;
+    text-align:right;
+}
+.hero-box h1{
+    color:#003399;
+    font-size:40px;
+}
+
+.hero-box h2{
+    color:#003399;
+    margin-top:10px;
+}
+
+.hero-box p{
+    color:#003399;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* About */
+
+.about-section{
+    background:#fff;
+    display:flex;
+    gap:40px;
+    align-items:center;
+    padding:50px;
+}
+
+.about-text{
+    flex:2;
+}
+
+.about-text h2{
+    color:#800000;
+    font-size:36px;
+    margin-bottom:20px;
+    border-bottom:3px solid #800000;
+    display:inline-block;
+}
+
+.about-text{
+    flex: 2;
+    text-align: justify;
+}
+
+.about-text p{
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 18px;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.about-image{
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img{
+    width: 100%;
+    max-width: 700px;   /* 500px → 700px */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.about-image img:hover{
+    transform: scale(1.05);
+}
+.readmore{
+    display:inline-block;
+    background:#800000;
     color:#fff;
-    width:90%;
-    z-index:20;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:5px;
+    margin-top:10px;
 }
 
-.hero-content h2{
-    font-size:2.3rem;
-    font-weight:700;
-    margin-bottom:10px;
+.readmore:hover{
+    background:#002147;
 }
 
-.hero-content h3{
-    font-size:1.8rem;
-    margin-bottom:10px;
+/* Footer */
+
+.footer{
+    background:#002147;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
 }
 
-.hero-content h4{
-    font-size:1.3rem;
-    margin-bottom:8px;
+.footer h2{
+    color:#FFD700;
+    margin-bottom:15px;
 }
 
-.hero-content h1{
-    color:#ffd700;
-    font-size:4rem;
-    font-weight:900;
-    margin-top:15px;
-    text-shadow:2px 2px 8px #000;
+.footer p{
+    margin:8px 0;
 }
 
-.hero-buttons{
-    margin-top:25px;
-}
+/* Responsive */
 
-.hero-buttons .btn{
-    margin:5px;
-    padding:10px 25px;
-    font-weight:bold;
-}
-
-/* Mobile */
 @media(max-width:768px){
 
+.about-section{
+    flex-direction:column;
+    padding:20px;
+}
+
 .hero{
-    height:550px;
+    min-height:650px;
 }
 
-.hero img.banner{
-    height:550px;
-}
-
-.hero-content{
-    top:90px;
-}
-
-.hero-content h2{
-    font-size:1.4rem;
-}
-
-.hero-content h3{
-    font-size:1.1rem;
-}
-
-.hero-content h4{
-    font-size:1rem;
-}
-
-.hero-content h1{
-    font-size:2.3rem;
+.hero-box{
+    position:relative;
+    top:160px;
+    right:0;
+    margin:auto;
+    width:90%;
+    text-align:center;
 }
 
 .logo-left,
 .logo-right{
-    width:60px;
+    width:70px;
 }
+
+.hero-box h1{
+    font-size:28px;
+}
+
 }
 </style>
-
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg">
-<div class="container-fluid px-4">
-    
-<button class="navbar-toggler bg-light"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse justify-content-start" id="menu">
-
-<ul class="navbar-nav">
-
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-
-<li class="nav-item"><a class="nav-link" href="papers.html">Call for Papers</a></li>
-
-<li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-
-<li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
-
-<li class="nav-item"><a class="nav-link" href="venue.html">Venue</a></li>
-
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-</ul>
-
-</div>
-
-</div>
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="papers.html">Call for Papers</a>
+<a href="registration.html">Registration</a>
+<a href="sponsorship.html">Sponsorship</a>
+<a href="committee.html">Committee</a>
+<a href="venue.html">Venue</a>
+<a href="contact.html">Contact</a>
+<a href="brochure.pdf" target="_blank">Brochure</a>
+<a href="poster.png" target="_blank">Poster</a>
 </nav>
 
 <div class="announcement">
@@ -197,292 +255,98 @@ data-bs-target="#menu">
 📢 Full Paper Submission: 15 August 2026 |
 📢 Acceptance Notification: 15 September 2026 |
 📢 Registration Deadline: 15 December 2026 |
-📢 Conference: 7–9 January 2027
+📢 Conference Dates: 07–09 January 2027
 </marquee>
 </div>
 
 <section class="hero">
 
-<img src="banner.png" class="banner">
+    <div class="hero-slider">
+        <img id="bannerImage" src="./banner.png" alt="Conference Banner">
+    </div>
 
-<div class="overlay"></div>
+    <img src="ila.png" class="logo-left" alt="ILA Logo">
 
-<img src="ila.png" class="logo-left">
+    <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad">
 
-<img src="uoh.jpg" class="logo-right">
+    <div class="hero-box">
+       <h1>72<sup>nd</sup> ILA International Conference</h1>
 
-<div class="hero-content">
+<h2>
+    Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
+</h2>
 
-<h2>72<sup>nd</sup> ILA International Conference</h2>
+<p><strong>7–9 January 2027</strong></p>
 
-<h3>Future Libraries: Advancing Research &amp; Excellence</h3>
+<p><strong>University of Hyderabad</strong></p>
+    </div>
 
-<h4>7–9 January 2027</h4>
+</section>
 
-<h4>University of Hyderabad</h4>
+<section class="about-section">
 
-<h1>FLARE-2027</h1>
+<div class="about-text">
 
-<div class="hero-buttons">
+<h2>About the Conference</h2>
 
-<a href="registration.html" class="btn btn-warning">
-Register Now
-</a>
+<p>
+The Indian Library Association (ILA) is honoured to host its 72nd Annual Conference 2027 in the historic “City of Pearls,” in collaboration with the University of Hyderabad, an Institution of Eminence. This premier international summit serves as a global nexus for librarians, information scientists, academicians, and technology innovators.
+</p>
 
-<a href="papers.html" class="btn btn-light">
-Call for Papers
-</a>
+<p>
+As the digital and physical frontiers of information continue to merge, this conference provides a vital forum to examine the shifting paradigms of our field. This landmark event will help redefine the role of libraries as catalysts for global knowledge and social progress.
+</p>
+
+<p>
+The main theme of the conference is <strong>Future Libraries: Advancing Research & Excellence 2027 (FLARE-2027)</strong>. The conference focuses on a wide range of emerging and trending topics in the field of Library and Information Science such as Libraries as Drivers of Sustainable Development, Green Libraries, Artificial Intelligence and Libraries, Assistive Technologies and Inclusive Library Services, and Emerging Technologies in the domain of Library Science.
+</p>
+
+<p>
+Overall, the sub-themes of the conference encompass the majority of emerging and innovative technologies in the domain of Library and Information Science. The sessions will explore the essential contribution of libraries in anchoring the future of intellectual exchange and driving meaningful community empowerment.
+</p>
+
+<a href="about.html" class="readmore">Read More</a>
 
 </div>
-
+<div class="about-image">
+    <img src="future-library-ai.jpg" alt="Future AI Library">
 </div>
 
 </section>
-<!-- About Conference Section -->
-<section style="padding:60px 20px; background:#f8f9fa;">
-    <div class="container">
 
-        <div class="row align-items-center">
+<footer class="footer">
 
-            <div class="col-lg-7">
+<h2>FLARE-2027</h2>
 
-                <h2 style="color:#7b1113; font-weight:bold; margin-bottom:20px;">
-                    About the Conference
-                </h2>
+<p><strong>72nd ILA International Conference</strong></p>
 
-                <p style="text-align:justify;">
-                    The 72<sup>nd</sup> ILA International Conference (FLARE-2027)
-                    brings together librarians, researchers, academicians,
-                    information professionals, policymakers and technology experts
-                    to discuss emerging trends in Library and Information Science.
-                </p>
+<p>Future Libraries: Advancing Research & Excellence</p>
 
-                <p style="text-align:justify;">
-                    The conference theme,
-                    <strong>Future Libraries: Advancing Research &amp; Excellence</strong>,
-                    focuses on Artificial Intelligence, Digital Libraries,
-                    Research Data Management, Open Science, Scholarly Communication,
-                    Knowledge Management, Information Literacy and Sustainable
-                    Library Services.
-                </p>
+<p>
+Indira Gandhi Memorial Library<br>
+University of Hyderabad<br>
+Hyderabad – 500046
+</p>
 
-                <a href="about.html" class="btn btn-danger mt-2">
-                    Read More
-                </a>
+<p>Email: 72ilaconferencehyd@gmail.com</p>
 
-            </div>
-
-            <div class="col-lg-5 text-center">
-
-                <img src="future-library-ai.jpg"
-                     class="img-fluid rounded shadow"
-                     alt="Future Library">
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- Important Dates -->
-<section style="padding:60px 20px;">
-
-    <div class="container">
-
-        <h2 class="text-center mb-5"
-            style="color:#7b1113;font-weight:bold;">
-
-            Important Dates
-
-        </h2>
-
-        <div class="row g-4">
-
-            <div class="col-md-3">
-
-                <div class="card h-100 shadow">
-
-                    <div class="card-body text-center">
-
-                        <h5>Paper Submission</h5>
-
-                        <p>15 August 2026</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="card h-100 shadow">
-
-                    <div class="card-body text-center">
-
-                        <h5>Acceptance</h5>
-
-                        <p>15 September 2026</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="card h-100 shadow">
-
-                    <div class="card-body text-center">
-
-                        <h5>Registration</h5>
-
-                        <p>15 December 2026</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="card h-100 shadow">
-
-                    <div class="card-body text-center">
-
-                        <h5>Conference</h5>
-
-                        <p>7–9 January 2027</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Conference Highlights -->
-<section style="background:#002147; color:white; padding:60px 20px;">
-
-    <div class="container">
-
-        <h2 class="text-center mb-5">
-            Conference Highlights
-        </h2>
-
-        <div class="row text-center">
-
-            <div class="col-md-3">
-                <h4>🎤</h4>
-                <h5>Keynote Talks</h5>
-            </div>
-
-            <div class="col-md-3">
-                <h4>📚</h4>
-                <h5>Research Papers</h5>
-            </div>
-
-            <div class="col-md-3">
-                <h4>🤖</h4>
-                <h5>AI &amp; Future Libraries</h5>
-            </div>
-
-            <div class="col-md-3">
-                <h4>🌍</h4>
-                <h5>International Networking</h5>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- Footer -->
-<footer style="background:#111827; color:#ffffff; padding:50px 20px 20px;">
-
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Conference Info -->
-            <div class="col-md-4 mb-4">
-                <h3 style="color:#FFD700;">FLARE-2027</h3>
-                <p>
-                    <strong>72<sup>nd</sup> ILA International Conference</strong><br>
-                    Future Libraries: Advancing Research &amp; Excellence
-                </p>
-            </div>
-
-            <!-- Contact -->
-            <div class="col-md-4 mb-4">
-                <h5 style="color:#FFD700;">Contact</h5>
-                <p>
-                    Indira Gandhi Memorial Library<br>
-                    University of Hyderabad<br>
-                    Hyderabad – 500046
-                </p>
-                <p>Email: 72ilaconferencehyd@gmail.com</p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-md-4 mb-4">
-                <h5 style="color:#FFD700;">Quick Links</h5>
-                <ul style="list-style:none; padding-left:0;">
-                    <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
-                    <li><a href="papers.html" style="color:#ffffff; text-decoration:none;">Call for Papers</a></li>
-                    <li><a href="registration.html" style="color:#ffffff; text-decoration:none;">Registration</a></li>
-                    <li><a href="committee.html" style="color:#ffffff; text-decoration:none;">Committee</a></li>
-                    <li><a href="venue.html" style="color:#ffffff; text-decoration:none;">Venue</a></li>
-                    <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <hr style="border-color:rgba(255,255,255,0.2);">
-
-        <div class="text-center">
-            <p style="margin-bottom:0;">
-                © 2027 FLARE-2027 | 72<sup>nd</sup> ILA International Conference |
-                University of Hyderabad. All Rights Reserved.
-            </p>
-        </div>
-
-    </div>
+<p>© 2027 Indian Library Association (ILA)</p>
 
 </footer>
-
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Banner Auto Slider -->
 <script>
 const banners = [
-    "banner.png",
-    "banner-1.png",
-    "banner-2.png"
+    "./banner.png",
+    "./banner-1.png",
+    "./banner-2.png"
 ];
 
-const banner = document.querySelector(".banner");
+let currentBanner = 0;
+const bannerImage = document.getElementById("bannerImage");
 
-if (banner) {
-    let current = 0;
-
-    setInterval(() => {
-        current = (current + 1) % banners.length;
-        banner.src = banners[current];
-    }, 4000);
-}
+setInterval(function () {
+    currentBanner = (currentBanner + 1) % banners.length;
+    bannerImage.src = banners[currentBanner];
+}, 4000);
 </script>
 
 </body>
