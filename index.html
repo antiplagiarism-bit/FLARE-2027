@@ -62,8 +62,6 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-
 }
 
 .hero-slider img{
@@ -89,45 +87,32 @@ body{
     z-index:2;
 }
 .hero-box{
-    position: absolute;
-    right: 40px;
-    top: 120px;
-    z-index: 100;   /* 2 కాకుండా 100 పెట్టండి */
-    background: rgba(255,255,255,0.80);
-    padding: 25px;
-    border-radius: 10px;
-    max-width: 700px;
-    text-align: right;
+    position:absolute;
+    right:40px;
+    top:120px;
+    z-index:2;
+    background:rgba(255,255,255,0.80);
+    padding:25px;
+    border-radius:10px;
+    max-width:700px;
+    text-align:right;
 }
 .hero-box h1{
-    color:#FFD700;
-    font-size:80px;
-    font-weight:bold;
-    text-shadow:3px 3px 8px black;
-    margin-top:20px;
+    color:#003399;
+    font-size:40px;
 }
 
 .hero-box h2{
-    color:#002147;
-    font-size:48px;
-    font-weight:bold;
+    color:#003399;
+    margin-top:10px;
 }
+
 .hero-box p{
     color:#003399;
     margin-top:10px;
     font-size:18px;
 }
-.hero-box h3{
-    color:#002147;
-    font-size:32px;
-    margin-top:10px;
-}
 
-.hero-box h4{
-    color:#002147;
-    font-size:22px;
-    margin-top:8px;
-}
 /* About */
 
 .about-section{
@@ -243,32 +228,9 @@ body{
 }
 
 .hero-box h1{
-    color:#b8860b;
-    font-size:72px;
-    font-weight:900;
-    margin-top:15px;
-    letter-spacing:2px;
-}
-.btn-register,
-.btn-paper{
-    display:inline-block;
-    padding:12px 28px;
-    margin:15px 8px 0 8px;
-    text-decoration:none;
-    border-radius:8px;
-    font-size:20px;
-    font-weight:bold;
+    font-size:28px;
 }
 
-.btn-register{
-    background:#FFC107;
-    color:#000;
-}
-
-.btn-paper{
-    background:#ffffff;
-    color:#000;
-}
 }
 </style>
 </head>
@@ -307,19 +269,17 @@ body{
 
     <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad">
 
-   <h2>72<sup>nd</sup> ILA International Conference</h2>
+    <div class="hero-box">
+       <h1>72<sup>nd</sup> ILA International Conference</h1>
 
-<h3>Future Libraries: Advancing Research &amp; Excellence</h3>
+<h2>
+    Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
+</h2>
 
-<h4>7–9 January 2027</h4>
+<p><strong>7–9 January 2027</strong></p>
 
-<h4>University of Hyderabad</h4>
-
-<h1>FLARE-2027</h1>
-
-<a href="registration.html" class="btn-register">Register Now</a>
-
-<a href="papers.html" class="btn-paper">Call for Papers</a>
+<p><strong>University of Hyderabad</strong></p>
+    </div>
 
 </section>
 
