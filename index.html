@@ -186,9 +186,30 @@ body{
 
 .footer{
     background:#002147;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
+    color:#ffffff;
+    padding:30px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.footer-text{
+    flex:1;
+}
+
+.footer-video{
+    flex:1;
+    text-align:right;
+}
+
+.footer-video iframe{
+    border:none;
+    border-radius:10px;
+    max-width:100%;
 }
 
 .footer h2{
@@ -313,24 +334,38 @@ Overall, the sub-themes of the conference encompass the majority of emerging and
 </div>
 
 </section>
-
 <footer class="footer">
 
-<h2>FLARE-2027</h2>
+    <div class="footer-content">
 
-<p><strong>72nd ILA International Conference</strong></p>
+        <div class="footer-text">
+            <h2>FLARE-2027</h2>
 
-<p>Future Libraries: Advancing Research & Excellence</p>
+            <p><strong>72nd ILA International Conference</strong></p>
 
-<p>
-Indira Gandhi Memorial Library<br>
-University of Hyderabad<br>
-Hyderabad – 500046
-</p>
+            <p>Future Libraries: Advancing Research & Excellence</p>
 
-<p>Email: 72ilaconferencehyd@gmail.com</p>
+            <p>
+                Indira Gandhi Memorial Library<br>
+                University of Hyderabad<br>
+                Hyderabad – 500046
+            </p>
 
-<p>© 2027 Indian Library Association (ILA)</p>
+            <p>Email: 72ilaconferencehyd@gmail.com</p>
+
+            <p>© 2027 Indian Library Association (ILA)</p>
+        </div>
+
+        <div class="footer-video">
+            <iframe
+                width="420"
+                height="240"
+                src="https://www.youtube.com/embed/SU2aFb8LiDw"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
 
 </footer>
 <script>
