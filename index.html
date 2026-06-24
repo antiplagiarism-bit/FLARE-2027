@@ -19,6 +19,7 @@ body{
 }
 
 /* Navigation */
+
 .navbar{
     background:#800000;
     padding:15px;
@@ -37,6 +38,7 @@ body{
 }
 
 /* Announcement */
+
 .announcement{
     background:#ffffff;
     border-top:3px solid #002147;
@@ -47,84 +49,72 @@ body{
     text-align:center;
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
-    position:relative;
-    height:600px;
-    overflow:hidden;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
 }
 
 .hero-slider{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-slider img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Logos */
 .logo-left{
     position:absolute;
-    top:20px;
     left:20px;
+    top:20px;
     width:90px;
-    z-index:20;
+    z-index:2;
 }
 
 .logo-right{
     position:absolute;
-    top:20px;
     right:20px;
+    top:20px;
     width:90px;
-    z-index:20;
+    z-index:2;
 }
-
-/* Hero Text */
 .hero-box{
     position:absolute;
-    top:42%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    width:90%;
-    max-width:1000px;
-    text-align:center;
-    z-index:30;
+    right:40px;
+    top:120px;
+    z-index:2;
+    background:rgba(255,255,255,0.80);
+    padding:25px;
+    border-radius:10px;
+    max-width:700px;
+    text-align:right;
 }
-
 .hero-box h1{
-    color:#FFD700;            /* Golden Yellow */
-    font-size:56px;
-    font-weight:800;
-    line-height:1.05;
-    margin-bottom:6px;
-    text-shadow:3px 3px 8px #000;
+    color:#003399;
+    font-size:40px;
 }
 
 .hero-box h2{
-    color:#FFD700;
-    font-size:34px;
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:6px;
-    text-shadow:3px 3px 8px #000;
+    color:#003399;
+    margin-top:10px;
 }
 
 .hero-box p{
-    color:#FFD700;
-    font-size:24px;
-    font-weight:bold;
-    line-height:1.1;
-    margin:2px 0;
-    text-shadow:3px 3px 8px #000;
+    color:#003399;
+    margin-top:10px;
+    font-size:18px;
 }
 
 /* About */
+
 .about-section{
     background:#fff;
     display:flex;
@@ -135,7 +125,6 @@ body{
 
 .about-text{
     flex:2;
-    text-align:justify;
 }
 
 .about-text h2{
@@ -146,28 +135,39 @@ body{
     display:inline-block;
 }
 
+.about-text{
+    flex: 2;
+    text-align: justify;
+}
+
 .about-text p{
-    margin-bottom:18px;
-    line-height:1.9;
-    font-size:17px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 18px;
+    line-height: 1.9;
+    font-size: 17px;
 }
 
 .about-image{
-    flex:1.5;
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img{
-    width:100%;
-    max-width:700px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 700px;   /* 500px → 700px */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 .about-image img:hover{
-    transform:scale(1.03);
-    transition:0.3s;
+    transform: scale(1.05);
 }
-
 .readmore{
     display:inline-block;
     background:#800000;
@@ -183,6 +183,7 @@ body{
 }
 
 /* Footer */
+
 .footer{
     background:#002147;
     color:#fff;
@@ -190,86 +191,46 @@ body{
     padding:40px 20px;
 }
 
-/* Mobile */
+.footer h2{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin:8px 0;
+}
+
+/* Responsive */
+
 @media(max-width:768px){
-
-.hero{
-    height:500px;
-}
-
-.logo-left,
-.logo-right{
-    width:65px;
-}
-
-.hero-box{
-    top:45%;
-    width:95%;
-}
-
-.hero-box h1{
-    font-size:30px;
-}
-
-.hero-box h2{
-    font-size:20px;
-}
-
-.hero-box p{
-    font-size:16px;
-}
 
 .about-section{
     flex-direction:column;
     padding:20px;
 }
 
-}
-    /* University Section */
-.uoh-section{
-    display:flex;
-    align-items:center;
-    gap:40px;
-    padding:50px;
-    background:#ffffff;
+.hero{
+    min-height:650px;
 }
 
-.video-box{
-    flex:1;
+.hero-box{
+    position:relative;
+    top:160px;
+    right:0;
+    margin:auto;
+    width:90%;
+    text-align:center;
 }
 
-.video-box iframe{
-    width:100%;
-    height:300px;
-    border:none;
-    border-radius:10px;
+.logo-left,
+.logo-right{
+    width:70px;
 }
 
-.uoh-text{
-    flex:1;
+.hero-box h1{
+    font-size:28px;
 }
 
-.uoh-text h2{
-    color:#800000;
-    margin-bottom:15px;
-    font-size:32px;
-}
-
-.uoh-text p{
-    text-align:justify;
-    line-height:1.8;
-    font-size:17px;
-}
-
-@media(max-width:768px){
-    .uoh-section{
-        flex-direction:column;
-        padding:20px;
-    }
-
-    .video-box iframe{
-        height:220px;
-    }
 }
 </style>
 </head>
@@ -308,15 +269,17 @@ body{
 
     <img src="uoh.jpg" class="logo-right" alt="University of Hyderabad">
 
-<div class="hero-box">
-    <h1>72<sup>nd</sup> ILA International Conference</h1>
+    <div class="hero-box">
+       <h1>72<sup>nd</sup> ILA International Conference</h1>
 
-    <h2>Future Libraries: Advancing Research &amp; Excellence</h2>
+<h2>
+    Future Libraries: Advancing Research &amp; Excellence (FLARE-2027)
+</h2>
 
-    <p>7–9 January 2027</p>
+<p><strong>7–9 January 2027</strong></p>
 
-    <p>University of Hyderabad</p>
-</div>
+<p><strong>University of Hyderabad</strong></p>
+    </div>
 
 </section>
 
@@ -348,51 +311,9 @@ Overall, the sub-themes of the conference encompass the majority of emerging and
 <div class="about-image">
     <img src="future-library-ai.jpg" alt="Future AI Library">
 </div>
-<section class="uoh-section">
-
-    <div class="video-box">
-        <iframe
-            src="https://www.youtube.com/embed/SU2aFb8LiDw"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <div class="uoh-text">
-        <h2>About the University of Hyderabad</h2>
-
-        <p>
-            The University of Hyderabad is one of India's premier Central Universities
-            and an Institution of Eminence. Established in 1974, it is renowned for
-            excellence in teaching, research, and innovation.
-        </p>
-
-        <p>
-            Spread across a beautiful green campus, the University offers
-            world-class facilities, advanced research centres, and the prestigious
-            Indira Gandhi Memorial Library, making it an ideal venue for
-            FLARE-2027.
-        </p>
-    </div>
 
 </section>
-</section>
-<section style="padding:50px; background:#ffffff; text-align:center;">
 
-    <h2 style="color:#800000; margin-bottom:20px;">
-        Campus Video
-    </h2>
-
-    <iframe
-        width="900"
-        height="500"
-        src="https://www.youtube.com/embed/SU2aFb8LiDw"
-        title="University Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-
-</section>
 <footer class="footer">
 
 <h2>FLARE-2027</h2>
