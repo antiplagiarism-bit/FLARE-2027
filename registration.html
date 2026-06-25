@@ -2,222 +2,152 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FLARE-2027 | Registration & Accommodation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>FLARE-2027 | Registration</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
     background:#f4f6f9;
-    color:#333;
-    line-height:1.7;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222;
 }
 
-/* ================= HERO BANNER ================= */
-```css id="0a5v9g"
-.hero{
-    background:
-        linear-gradient(
-            rgba(0, 33, 71, 0.10)
-            rgba(0, 33, 71, 0.10)
-        ),
-        url("registration-banner.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    height: 220px;   /* Banner height - small */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    color: white;
+.navbar{
+    padding:8px 0;
 }
 
-.hero h1{
-    font-size: 38px;
-    margin-bottom: 8px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}
-
-.hero p{
-    font-size: 18px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-```
-
-
-/* ================= NAVBAR ================= */
-
-nav{
-    background:#800000;
-    text-align:center;
-    padding:14px;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin:0 14px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffd54f;
-}
-
-/* ================= CONTENT ================= */
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:35px auto;
-}
-
-.card{
-    background:#fff;
-    border-radius:10px;
-    padding:25px;
-    margin-bottom:30px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+.container-custom{
+    max-width:1100px;
+    margin:auto;
 }
 
 h2{
-    color:#002147;
-    border-left:6px solid #800000;
-    padding-left:10px;
-    margin-bottom:20px;
+    color:#0b3b75;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
-table{
+p{
+    margin-bottom:8px;
+    line-height:1.6;
+}
+
+.banner{
     width:100%;
-    border-collapse:collapse;
+    border-radius:6px;
+    margin:10px 0 15px 0;
 }
 
-th{
-    background:#002147;
+.section-box{
+    background:#fff;
+    padding:18px;
+    border:1px solid #dcdcdc;
+    border-radius:6px;
+    margin-top:15px;
+}
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead{
+    background:#0b3b75;
     color:#fff;
-    padding:12px;
 }
 
-td{
+.table thead th{
+    background:#0b3b75;
+    color:#fff;
+    text-align:center;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.qr-box{
     border:1px solid #ddd;
+    border-radius:6px;
     padding:12px;
     text-align:center;
 }
 
-tr:nth-child(even){
-    background:#f8f8f8;
+.qr-box img{
+    width:170px;
+    max-width:100%;
 }
 
-.note{
-    margin-top:15px;
-    background:#eef5ff;
-    border-left:5px solid #0d6efd;
+footer{
+    background:#0b3b75;
+    color:#fff;
+    text-align:center;
     padding:15px;
+    margin-top:20px;
 }
 
-@media(max-width:768px){
-
-.hero{
-height:250px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-nav a{
-display:block;
-margin:10px;
-}
-
-table{
-display:block;
-overflow-x:auto;
-}
-
-}
 </style>
 
 </head>
 
 <body>
 
-<!-- HERO -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container-custom">
 
-<div class="hero">
-
-<div>
-
-<h1>FLARE-2027</h1>
-
-<p>
-Registration • Accommodation • Payment Details
-</p>
+<a class="navbar-brand fw-bold" href="#">
+FLARE-2027
+</a>
 
 </div>
-
-</div>
-
-<!-- MENU -->
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="papers.html">Call for Papers</a>
-
-<a href="registration.html">Registration</a>
-
-<a href="committee.html">Committee</a>
-
-<a href="contact.html">Contact</a>
-
 </nav>
 
-<div class="container">
+<div class="container-custom mt-3">
 
-<!-- REGISTRATION -->
+<div class="section-box">
 
-<div class="card">
+<h2>Registration & Accommodation</h2>
 
-<h2>Registration Charges</h2>
+<p>
+Participants are requested to complete registration before the prescribed
+deadline. Conference Proceedings purchase is mandatory for accepted papers.
+Accommodation may be availed on request subject to availability.
+</p>
 
-<table>
+<img src="registration-banner.png"
+class="banner"
+alt="Registration Banner">
+
+<h2 class="mt-2">Registration Charges</h2>
+
+<table class="table table-bordered">
+
+<thead>
 
 <tr>
 
 <th>Category</th>
 
-<th>On or Before<br>15 Dec 2026</th>
+<th>On / Before<br>15 Dec 2026</th>
 
 <th>After<br>15 Dec 2026</th>
 
 </tr>
 
+</thead>
+
+<tbody>
+
 <tr>
 
 <td>LIS Professionals (Non-ILA Members)</td>
 
-<td>₹3,000/-</td>
+<td align="center">₹3,000/-</td>
 
-<td>₹3,500/-</td>
+<td align="center">₹3,500/-</td>
 
 </tr>
 
@@ -225,9 +155,9 @@ Registration • Accommodation • Payment Details
 
 <td>ILA Members</td>
 
-<td>₹2,500/-</td>
+<td align="center">₹2,500/-</td>
 
-<td>₹3,000/-</td>
+<td align="center">₹3,000/-</td>
 
 </tr>
 
@@ -235,19 +165,19 @@ Registration • Accommodation • Payment Details
 
 <td>Research Scholars / Students</td>
 
-<td>₹2,000/-</td>
+<td align="center">₹2,000/-</td>
 
-<td>₹2,500/-</td>
+<td align="center">₹2,500/-</td>
 
 </tr>
 
 <tr>
 
-<td>Foreign Delegates (with Accommodation)</td>
+<td>Foreign Delegates</td>
 
-<td>USD 250</td>
+<td align="center">USD 250</td>
 
-<td>USD 300</td>
+<td align="center">USD 300</td>
 
 </tr>
 
@@ -255,107 +185,77 @@ Registration • Accommodation • Payment Details
 
 <td>Conference Proceedings *</td>
 
-<td>₹1,000/-</td>
+<td align="center">₹1,000/-</td>
 
-<td>₹1,000/-</td>
+<td align="center">₹1,000/-</td>
 
 </tr>
 
+</tbody>
+
 </table>
 
-<div class="note">
-
-<b>Note:</b> Purchase of Conference Proceedings is mandatory for all accepted papers.
-
 </div>
+<!-- ================= PAYMENT & QR SECTION ================= -->
 
-</div>
-<!-- ================= PAYMENT & QR CODES ================= -->
-
-<div class="card">
+<div class="section-box">
 
     <h2>Registration & Payment QR Codes</h2>
 
-    <div style="
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:25px;
-    ">
+    <div class="row g-3 mt-1">
 
         <!-- Registration QR -->
-        <div style="
-            width:300px;
-            text-align:center;
-            border:1px solid #ddd;
-            border-radius:10px;
-            padding:20px;
-        ">
+        <div class="col-md-4">
+            <div class="qr-box">
+                <h5>Registration</h5>
 
-            <h3>Registration QR</h3>
+                <img src="registration-qr.png"
+                     alt="Registration QR">
 
-            <img src="registration-qr.png"
-                 alt="Registration QR"
-                 style="width:180px;max-width:100%;">
-
-            <p style="margin-top:10px;">
-                Scan to open the FLARE-2027 registration page.
-            </p>
-
+                <p class="mt-2 mb-0">
+                    Scan to complete online registration.
+                </p>
+            </div>
         </div>
 
         <!-- Proceedings QR -->
-        <div style="
-            width:300px;
-            text-align:center;
-            border:1px solid #ddd;
-            border-radius:10px;
-            padding:20px;
-        ">
+        <div class="col-md-4">
+            <div class="qr-box">
+                <h5>Conference Proceedings</h5>
 
-            <h3>Conference Proceedings</h3>
+                <img src="proceedings-qr.png"
+                     alt="Proceedings QR">
 
-            <img src="proceedings-qr.png"
-                 alt="Proceedings QR"
-                 style="width:180px;max-width:100%;">
+                <p class="mt-2 mb-1">
+                    ₹1,000/- (Mandatory for accepted papers)
+                </p>
 
-            <p style="margin-top:10px;">
-                ₹1,000/- (Mandatory for accepted papers)
-            </p>
-
-            <small>
-                Bank of Maharashtra<br>
-                A/C No: 20024270299<br>
-                IFSC: MAHB0000901
-            </small>
-
+                <small>
+                    Bank of Maharashtra<br>
+                    A/C No: 20024270299<br>
+                    IFSC: MAHB0000901
+                </small>
+            </div>
         </div>
 
         <!-- Accommodation QR -->
-        <div style="
-            width:300px;
-            text-align:center;
-            border:1px solid #ddd;
-            border-radius:10px;
-            padding:20px;
-        ">
+        <div class="col-md-4">
+            <div class="qr-box">
+                <h5>Accommodation</h5>
 
-            <h3>Accommodation Payment</h3>
+                <img src="accommodation-qr.png.jpg"
+                     alt="Accommodation QR">
 
-            <img src="accommodation-qr.png.jpg"
-                 alt="Accommodation QR"
-                 style="width:180px;max-width:100%;">
+                <p class="mt-2 mb-1">
+                    Scan to pay accommodation charges.
+                </p>
 
-            <p style="margin-top:10px;">
-                Scan to pay accommodation charges.
-            </p>
-
-            <small>
-                State Bank of India<br>
-                A/C No: 45192000787<br>
-                IFSC: SBIN0015612
-            </small>
-
+                <small>
+                    State Bank of India<br>
+                    A/C No: 45192000787<br>
+                    IFSC: SBIN0015612
+                </small>
+            </div>
         </div>
 
     </div>
@@ -364,123 +264,88 @@ Registration • Accommodation • Payment Details
 
 <!-- ================= ACCOMMODATION ================= -->
 
-<div class="card">
+<div class="section-box">
 
     <h2>Accommodation Charges (3 Days)</h2>
 
-    <table>
+    <table class="table table-bordered">
 
-        <tr>
-            <th>Accommodation Type</th>
-            <th>Tariff</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Accommodation Type</th>
+                <th>Tariff</th>
+            </tr>
+        </thead>
 
-        <tr>
-            <td>Single Occupancy</td>
-            <td>₹3,000/-</td>
-        </tr>
+        <tbody>
 
-        <tr>
-            <td>Twin Sharing</td>
-            <td>₹2,400/-</td>
-        </tr>
+            <tr>
+                <td>Single Occupancy</td>
+                <td align="center">₹3,000/-</td>
+            </tr>
 
-        <tr>
-            <td>Triple Sharing</td>
-            <td>₹1,800/-</td>
-        </tr>
+            <tr>
+                <td>Twin Sharing</td>
+                <td align="center">₹2,400/-</td>
+            </tr>
+
+            <tr>
+                <td>Triple Sharing</td>
+                <td align="center">₹1,800/-</td>
+            </tr>
+
+        </tbody>
 
     </table>
 
-    <div class="note">
+    <div class="alert alert-info mt-2 mb-0">
 
-        ✔ Accommodation will be allotted on a first-come, first-served basis.<br>
-        ✔ Advance payment is required for booking confirmation.<br>
-        ✔ Booking requests are accepted up to <strong>30 September 2026</strong>, subject to availability.<br>
-        ✔ GST and applicable taxes will be charged as per Government norms.
+        ✔ Accommodation is subject to availability.<br>
+
+        ✔ Rooms are allotted on a first-come, first-served basis.<br>
+
+        ✔ Advance payment is required for confirmation.<br>
+
+        ✔ Booking requests will be accepted up to
+        <strong>30 September 2026</strong>.
 
     </div>
 
 </div>
-
-<!-- ================= NEARBY HOTELS ================= -->
-
-<div class="card">
-
-    <h2>Nearby Hotels & Guest Houses</h2>
-
-    <table>
-
-        <tr>
-            <th>S.No</th>
-            <th>Hotel Name</th>
-            <th>Location</th>
-            <th>Distance</th>
-            <th>Contact</th>
-        </tr>
-
-        <tr>
-            <td>1</td>
-            <td>Town House</td>
-            <td>Kondapur</td>
-            <td>4.8 KM</td>
-            <td>7095411315</td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Silver Suite</td>
-            <td>Kondapur</td>
-            <td>2.8 KM</td>
-            <td>-</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>FabHotel SSR Ikon Suites</td>
-            <td>Gachibowli</td>
-            <td>3.3 KM</td>
-            <td>-</td>
-        </tr>
-
-        <tr>
-            <td>4</td>
-            <td>Jaswitha Mukkanti Hotel</td>
-            <td>Kondapur</td>
-            <td>3.1 KM</td>
-            <td>9376366666</td>
-        </tr>
-
-        <tr>
-            <td>5</td>
-            <td>Via Athidhi Stay Inn</td>
-            <td>Kondapur</td>
-            <td>4.9 KM</td>
-            <td>7042424242</td>
-        </tr>
-
-    </table>
-
-</div>
-
 <!-- ================= IMPORTANT INFORMATION ================= -->
 
-<div class="card">
+<div class="section-box">
 
     <h2>Important Information</h2>
 
-    <div class="note">
+    <ul style="margin-bottom:0; padding-left:20px; line-height:1.7;">
+        <li>Conference Proceedings purchase is mandatory for all accepted papers.</li>
+        <li>Accommodation is optional and subject to availability.</li>
+        <li>Advance payment is required for accommodation confirmation.</li>
+        <li>GST and other applicable taxes will be charged as per Government norms.</li>
+        <li>Accommodation booking will be processed on a first-come, first-served basis.</li>
+        <li>Accompanying persons shall pay 50% of the applicable registration fee.</li>
+    </ul>
 
-        ✔ Conference Proceedings purchase is mandatory for all accepted papers.<br><br>
+</div>
 
-        ✔ Accommodation is optional and subject to room availability.<br><br>
+<!-- ================= CONTACT ================= -->
 
-        ✔ Delegates choosing outside hotels must bear their own expenses.<br><br>
+<div class="section-box">
 
-        ✔ Accommodation booking is confirmed only after advance payment.<br><br>
+    <h2>Accommodation Contact</h2>
 
-        ✔ Accompanying persons shall pay 50% of the applicable registration fee.
-        Conference kit will not be provided to accompanying persons.
+    <div class="row">
+
+        <div class="col-md-6">
+            <strong>Email</strong><br>
+            drvenkatlibhcu@uohyd.ac.in
+        </div>
+
+        <div class="col-md-6">
+            <strong>Mobile</strong><br>
+            +91 9948258015
+        </div>
 
     </div>
 
@@ -488,60 +353,34 @@ Registration • Accommodation • Payment Details
 
 <!-- ================= REGISTER BUTTON ================= -->
 
-<div class="card" style="text-align:center;">
-
-    <h2>Online Registration</h2>
-
-    <p>
-        Use the Registration QR Code above or click the button below.
-    </p>
-
-    <br>
+<div class="text-center mt-3 mb-3">
 
     <a href="https://planner.inflibnet.ac.in/registration"
        target="_blank"
-       style="
-       display:inline-block;
-       background:#198754;
-       color:#fff;
-       padding:14px 30px;
-       text-decoration:none;
-       border-radius:8px;
-       font-size:18px;
-       font-weight:bold;
-       ">
-       Register Now
+       class="btn btn-success btn-lg px-4">
+
+        Register Online
+
     </a>
 
 </div>
 
 </div>
-<!-- End Container -->
+<!-- End container-custom -->
 
-<footer style="
-background:#002147;
-color:#ffffff;
-text-align:center;
-padding:25px;
-margin-top:40px;
-">
+<footer>
 
-    <h3>FLARE-2027 International Conference</h3>
+    <strong>FLARE-2027 International Conference</strong><br>
 
-    <p>
-        Department of Library & Information Science<br>
-        University of Hyderabad, Hyderabad
-    </p>
+    Department of Library & Information Science<br>
 
-    <br>
+    University of Hyderabad, Hyderabad<br><br>
 
-    <p>
-        © 2027 FLARE-2027 | All Rights Reserved
-    </p>
+    © 2027 FLARE-2027. All Rights Reserved.
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
